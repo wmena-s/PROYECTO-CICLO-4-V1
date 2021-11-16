@@ -23,7 +23,7 @@ const regisitroJugadores = () => {
                 </div>
                 <div className="formulario-n1"> 
                 <label>equipo</label>
-                <input type={Text} placeholder="edad" className="equipo" className="formulario"/>
+                <input type={Text} placeholder="edad" className="formulario"/>
                 </div>
             </form>
             </div>
