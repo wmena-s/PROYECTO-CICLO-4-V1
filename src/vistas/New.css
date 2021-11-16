@@ -1,0 +1,21 @@
+.contenedor{
+    align-content: center;
+    margin: 20px;
+}
+
+
+.formulario-n1{
+    display: flex;
+}
+
+.formulario{
+    border-radius: 12px;
+    
+}
+
+
+.etiqueta{
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
