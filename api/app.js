@@ -5,7 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users')
-var jugadorRouter = require('./routes/jugador');;
+var jugadorRouter = require('./routes/equipo');;
 
 var app = express();
 // inicio: permite hacer llamados de react desde otro direccion (5000) a la 3000 de la api

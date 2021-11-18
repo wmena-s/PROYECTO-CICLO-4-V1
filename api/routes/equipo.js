@@ -25,5 +25,28 @@ router.get('/', async function (req, res) {
     res.send(equipo);
   });
 
+//buscar equipo por id
+router.get('/:id', async function (req, res){
+  const equipo = await CrearEquipo.findById(req.params.id);
+  res.send(equipo)
+})
+
+router.put('/', async function(req, res){
+  await CrearEquipo.findOneAndUpdate({
+    _id: req.body._id,
+  }, {
+    nombre: req.body.nombre,
+    usuaro: req.body.usuario,
+    correo: req.body.correo,
+    contraseña: req.body.contraseña,
+    nombreEquipo: req.body.nombreEquipo
+  });
+  res.send(true);
+});
+
+router.delete('/:id', async function (req, res){
+  await CrearEquipo.findOneAndDelete({_id: req.params.id});
+  res.send(true);
+})
 
 module.exports = router;

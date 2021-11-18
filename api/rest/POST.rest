@@ -1,0 +1,10 @@
+POST http://localhost:5000/registros
+content-type: application/json
+
+{
+    "nombre": "hola",
+    "usuario": "hola",
+    "correo": "req.body.corre",
+    "contraseña": "req.body.contraseña",
+    "nombreEquipo": "req.body.nombreEquipo"
+}
