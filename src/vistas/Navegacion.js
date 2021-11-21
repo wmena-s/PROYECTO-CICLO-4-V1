@@ -42,22 +42,26 @@ class Navegacion extends React.Component {
                 </ul>
             </nav> */
             /*<Nav.Link as={NavLink} to="/usuarios">Usuarios</Nav.Link> --> esa estructura permite que al cambiar de pagina se conserve el estilo de boostrap-react */
-            <Navbar collapseOnSelect expand="lg" variant="dark" bg="dark">
+            <Navbar collapseOnSelect expand="lg" variant="dark" bg="primary">
                 <Navbar.Brand>Menu</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive"/>
                 <Navbar.Collapse id="responsive">
                     <Nav ClassName='mr-auto'>
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link> 
-                        <Nav.Link as={NavLink} to="/">Salir</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link as={NavLink} to="/usuarios">Usuarios</Nav.Link>
+                        <Nav.Link as={NavLink} to="/usuarios">Equipos</Nav.Link>
                         <Nav.Link as={NavLink} to="/registrosJugadores">Registrar</Nav.Link>
+                        <Nav.Link as={NavLink} to="/usuarioInterno">U interno</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link as={NavLink} to="/" ><abbr title ="Dar clic si desea salir de la aplicaion.">Salir</abbr> </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
            
             </Navbar>
+        
         )
 
     }

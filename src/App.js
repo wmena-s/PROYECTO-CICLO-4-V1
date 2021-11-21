@@ -1,9 +1,11 @@
 import './App.css';
-import New from './vistas/New'
+import New from './vistas/registros/New'
 import Navegacion from './vistas/Navegacion'
 import Inicio from './vistas/Inicio'
 import NoFount from './vistas/NoFount'
+import UsuarioI from './vistas/registros/UsuarioInterno';
 import RegisitroJugadores from './vistas/RegisitroJugadores';
+
 //inicio de aplicacion.
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import PrivateRoute from './vistas/rutasPrivadas/PrivateRoute';
@@ -18,8 +20,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Inicio />}/>
               <Route path="/usuarios" element={<New />} />
-              <Route path="/registrosJugadores" element={<RegisitroJugadores />} />    
-
+              <Route path="/registroJugador" element={<RegisitroJugadores />} />    
+              <Route path="/usuarioInterno" element={<UsuarioI />} />
               <Route path="*" element={<NoFount />} />
             </Routes>
             </BrowserRouter>,

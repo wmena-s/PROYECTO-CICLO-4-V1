@@ -1,0 +1,27 @@
+.contenedor-formulario{
+    background-color: antiquewhite;
+    padding: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2%;
+}
+
+.contenedor-formulario div img {
+    align-content: center;
+}
+
+.form{
+    margin: 12px;
+    align-content: center;
+}
+
+.formularioV1{
+    margin: 39px;
+    padding: 0px 300px;
+}
+
+.contanedorgeneral{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

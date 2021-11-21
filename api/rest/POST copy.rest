@@ -1,0 +1,10 @@
+POST http://localhost:5000/usuarioInterno
+content-type: application/json
+
+{
+    "nombre": "h2ssssssssss2222222",
+    "usuario": "hoasdfla",
+    "correo": "req.badfody.corre",
+    "contraseña": "req.body.contraseña",
+    "nombreEquipo": "adjfsdlkfh"
+}

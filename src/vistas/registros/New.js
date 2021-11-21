@@ -1,10 +1,11 @@
 import './New.css';
 import React from 'react';
-import Constantes from "../Constantes";
+import Constantes from "../../Constantes";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
+
 
 class New extends React.Component {
     constructor(props) {
@@ -33,26 +34,26 @@ class New extends React.Component {
                 <div>
                     <p>registra aqui tu equipo de futbol</p>
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
-                        <div className="form-group">
+                        <div className="formulario-n1">
                             <label className="label" htmlFor="nombre">Nombre:</label> 
-                            <input placeholder="Nombre" id="nombre" name="nombre" onChange={this.manejarCambio} value={this.state.equipo.nombre} ></input>
+                            <input className="form-control" placeholder="Nombre" id="nombre" name="nombre" onChange={this.manejarCambio} value={this.state.equipo.nombre} ></input>
                         </div>
                         <div className="formulario-n1">
                             <label className="label" htmlFor="usuario">usuario:</label><input placeholder="Usuario" id="usuario"  name="usuario" onChange={this.manejarCambio} value={this.state.equipo.usuario} ></input>
                         </div>
                         <div className="formulario-n1">
                             <label className="label" htmlFor="correo">Correo:</label>
-                            <input placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
+                            <input className="form-control" placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
                         </div>
                         <div className="formulario-n1">
                             <label className="label" htmlFor="contraseña">contraseña:</label>
-                            <input placeholder="contraseña" id="contraseña" name="contraseña" onChange={this.manejarCambio} value={this.state.equipo.contraseña} ></input>
+                            <input className="form-control" placeholder="contraseña" id="contraseña" name="contraseña" onChange={this.manejarCambio} value={this.state.equipo.contraseña} ></input>
                         </div>
                         <div className="formulario-n1">
                             <label className="label" htmlFor="nombreEquipo">nombreEquipo:</label> 
-                            <input placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
+                            <input className="form-control" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
                         </div>
-                        <button>Guardar</button>
+                        <button className="btn btn-dark">Guardar</button>
                     </form>
                 </div>
              
@@ -95,7 +96,7 @@ class New extends React.Component {
             toast.error("Error guardando. Intenta de nuevo");
         }
     }
-
+    
     manejarCambio(evento) {
         const clave = evento.target.id;
         let valor = evento.target.value;

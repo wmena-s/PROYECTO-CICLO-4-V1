@@ -6,5 +6,5 @@ content-type: application/json
     "usuario": "hola",
     "correo": "req.body.corre",
     "contraseña": "req.body.contraseña",
-    "nombreEquipo": "req.body.nombreEquipo"
+    "nombreEquipo": "alksdjfk"
 }

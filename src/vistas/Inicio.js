@@ -1,4 +1,6 @@
 import {Carousel} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import './Nav.css'
 
 const Inicio = () => {
     return (
@@ -12,7 +14,7 @@ const Inicio = () => {
     />
     <Carousel.Caption>
       <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <p className="color">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -24,7 +26,7 @@ const Inicio = () => {
 
     <Carousel.Caption>
       <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p className="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -33,15 +35,16 @@ const Inicio = () => {
       src="https://fondosmil.com/fondo/1739.jpg"
       alt="Third slide"
     />
-
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>REGISTRA TU EQUIPO</h3>
+      <p className="color">registra tu equipo con tiempo . <br/><Link as={Link} to="/registrosJugadores">Registrar</Link></p>
+      
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
         </div>
     )
 }
+
 
 export default Inicio
