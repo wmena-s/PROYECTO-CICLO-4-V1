@@ -6,7 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var jugadorRouter = require('./routes/equipo');
-var usuarioInterno = require('./routes/usuariosInternos'); // se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
+var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
 
 var app = express();
 // inicio: permite hacer llamados de react desde otro direccion (5000) a la 3000 de la api

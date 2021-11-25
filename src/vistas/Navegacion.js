@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './Nav.css'
-import { Navbar, Nav, NavDropdown, } from 'react-bootstrap'
+import { Navbar, Nav, } from 'react-bootstrap'
 
 class Navegacion extends React.Component {
     constructor(props) {
@@ -43,13 +43,14 @@ class Navegacion extends React.Component {
             </nav> */
             /*<Nav.Link as={NavLink} to="/usuarios">Usuarios</Nav.Link> --> esa estructura permite que al cambiar de pagina se conserve el estilo de boostrap-react */
             <Navbar collapseOnSelect expand="lg" variant="dark" bg="primary">
-                <Navbar.Brand>Menu</Navbar.Brand>
+                <Navbar.Brand>LIINCA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive"/>
                 <Navbar.Collapse id="responsive">
                     <Nav ClassName='mr-auto'>
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link> 
+                        <Nav.Link as={NavLink} to="/administrador">Home Administrador</Nav.Link> 
                     </Nav>
-                    <Nav>
+                    <Nav className="administradores">
                         <Nav.Link as={NavLink} to="/usuarios">Equipos</Nav.Link>
                         <Nav.Link as={NavLink} to="/registrosJugadores">Registrar</Nav.Link>
                         <Nav.Link as={NavLink} to="/usuarioInterno">U interno</Nav.Link>

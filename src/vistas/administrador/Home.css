@@ -1,0 +1,18 @@
+.col-sm-3{
+    background-color:azure;
+    border-color: blue;
+    
+    margin: 4px;
+    border-radius: .5rem;
+}
+
+.row{
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Comforter', cursive;
+    font-family: 'Oswald', sans-serif;
+    color:red;
+    
+}
