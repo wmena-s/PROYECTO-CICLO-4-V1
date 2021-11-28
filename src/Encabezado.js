@@ -1,6 +1,3 @@
-
-
-
 const Encabezado = () => {
     return (
         <div>

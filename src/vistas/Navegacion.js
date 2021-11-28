@@ -52,10 +52,10 @@ class Navegacion extends React.Component {
                     </Nav>
                     <Nav className="USUARIO EXTERNO">
                         <Nav.Link as={NavLink} to="/usuarioInterno/equipos/inscrbir">UE inscribir E</Nav.Link>
-                        <Nav.Link as={NavLink} to="/registrosJugadores">Registrar</Nav.Link>
+                        <Nav.Link as={NavLink} to="/RegisitroJugadores">Registrar</Nav.Link>
                         <Nav.Link as={NavLink} to="/usuarioInterno">UE registrar</Nav.Link>
                         <Nav.Link as={NavLink} to="/usuarioInterno/campeonato">Campeonato</Nav.Link>
-                        <Nav.Link as={NavLink} to="/administrador/usuariosExternos">usuarios Externos Registrados</Nav.Link>
+                        <Nav.Link as={NavLink} to="/usuario_externo/UsuariosRegistrados">usuarios Externos Registrados</Nav.Link>
                         
                     </Nav>
                     <Nav>
