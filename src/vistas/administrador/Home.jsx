@@ -46,9 +46,11 @@ export default class Home extends Component{
         return(
     
                     <div row text-center>
-                 
+                        <button button class="btn btn-primary" href="">añadir</button>
+                        <button button class="btn btn-primary" to="./equipos/registrados">campeonatos</button>
                         <div className="row">
                             <h1>EQUIPOS INSCRITOS</h1>
+
                             <div className="row text-center">
                                 {
                                     this.state.users.map(user=>
@@ -59,6 +61,7 @@ export default class Home extends Component{
                                             <p>Nombre: {user.nombre}</p> 
                                             <p>Fri. 27 November 2015</p>
                                             <button class="btn btn-primary">Editar</button>
+                                            <button class="btn btn-primary">Eliminar</button>
                                         </div>
                                     </div>)
                                     

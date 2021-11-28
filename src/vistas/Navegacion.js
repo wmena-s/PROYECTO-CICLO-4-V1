@@ -48,12 +48,15 @@ class Navegacion extends React.Component {
                 <Navbar.Collapse id="responsive">
                     <Nav ClassName='mr-auto'>
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link> 
-                        <Nav.Link as={NavLink} to="/administrador">Home Administrador</Nav.Link> 
+                        <Nav.Link as={NavLink} to="/equipos/registrados">UE registrados</Nav.Link> 
                     </Nav>
-                    <Nav className="administradores">
-                        <Nav.Link as={NavLink} to="/usuarios">Equipos</Nav.Link>
+                    <Nav className="USUARIO EXTERNO">
+                        <Nav.Link as={NavLink} to="/usuarioInterno/equipos/inscrbir">UE inscribir E</Nav.Link>
                         <Nav.Link as={NavLink} to="/registrosJugadores">Registrar</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuarioInterno">U interno</Nav.Link>
+                        <Nav.Link as={NavLink} to="/usuarioInterno">UE registrar</Nav.Link>
+                        <Nav.Link as={NavLink} to="/usuarioInterno/campeonato">Campeonato</Nav.Link>
+                        <Nav.Link as={NavLink} to="/administrador/usuariosExternos">usuarios Externos Registrados</Nav.Link>
+                        
                     </Nav>
                     <Nav>
                         <Nav.Link as={NavLink} to="/" ><abbr title ="Dar clic si desea salir de la aplicaion.">Salir</abbr> </Nav.Link>

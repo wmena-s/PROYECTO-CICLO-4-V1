@@ -30,29 +30,36 @@ class New extends React.Component {
                   REGISTRO DE EQUIPOS
                 </h1>
                 <div>
-                    <p>registra aqui tu equipo de futbol</p>
+                    <p>Registra aqui tu equipo de futbol</p>
+                    <div className="container formulario">
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
-                        <div className="formulario-n1">
+                        <div className="row">
+                        <div className="col-6">
                             <label className="label" htmlFor="nombre">Nombre:</label> 
-                            <input className="form-control" placeholder="Nombre" id="nombre" name="nombre" onChange={this.manejarCambio} value={this.state.equipo.nombre} ></input>
+                            <input className="form-control" type="text" placeholder="Nombre" id="nombre" name="nombre" onChange={this.manejarCambio} value={this.state.equipo.nombre} ></input>
                         </div>
-                        <div className="formulario-n1">
-                            <label className="label" htmlFor="usuario">usuario:</label><input placeholder="Usuario" id="usuario"  name="usuario" onChange={this.manejarCambio} value={this.state.equipo.usuario} ></input>
+                        <div className="col-6">
+                            <label className="label" htmlFor="usuario">Usuario:</label>
+                            <input className="form-control" type="text" placeholder="Usuario" id="usuario"  name="usuario" onChange={this.manejarCambio} value={this.state.equipo.usuario} ></input>
                         </div>
-                        <div className="formulario-n1">
+                        <div className="col-6">
                             <label className="label" htmlFor="correo">Correo:</label>
-                            <input className="form-control" placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
+                            <input className="form-control" type="email" placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
                         </div>
-                        <div className="formulario-n1">
+                        <div className="col-6">
                             <label className="label" htmlFor="contraseña">contraseña:</label>
-                            <input className="form-control" placeholder="contraseña" id="contraseña" name="contraseña" onChange={this.manejarCambio} value={this.state.equipo.contraseña} ></input>
+                            <input className="form-control" type="password" placeholder="contraseña" id="contraseña" name="contraseña" onChange={this.manejarCambio} value={this.state.equipo.contraseña} ></input>
                         </div>
-                        <div className="formulario-n1">
+                        <div className="col-6">
                             <label className="label" htmlFor="nombreEquipo">nombreEquipo:</label> 
-                            <input className="form-control" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
+                            <input className="form-control" type="text" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
                         </div>
-                        <button className="btn btn-dark">Guardar</button>
+                        <label>acepto terminos y condiciones</label>
+                        <div className="ajustarIzq">
+                        <button className="btn btn-danger col-3">Guardar</button> </div>
+                        </div>
                     </form>
+                    </div>
                 </div>
              
               </header>

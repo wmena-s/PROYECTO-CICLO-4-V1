@@ -11,7 +11,7 @@ import Encabezado from './Encabezado'
 
 ReactDOM.render(
     <React.StrictMode>
-          <Encabezado/>
+      
           <App/>
   
     </React.StrictMode>,

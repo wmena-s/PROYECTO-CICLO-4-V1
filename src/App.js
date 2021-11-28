@@ -6,6 +6,8 @@ import NoFount from './vistas/NoFount'
 import UsuarioI from './vistas/registros/UsuarioInterno';
 import RegisitroJugadores from './vistas/RegisitroJugadores';
 import Home from './vistas/administrador/Home.jsx';
+import Campeonatos from './vistas/administrador/Capeonatos'
+import UsuarioExterno from './vistas/administrador/UsuariosExternosRegistrados'
 
 //inicio de aplicacion.
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -17,12 +19,15 @@ function App() {
             <div className="columns">
             <BrowserRouter>
             <Navegacion></Navegacion>
-            <Routes>
+            <Routes>  
               <Route path="/" element={<Inicio />}/>
-              <Route path="/usuarios" element={<New />} />
+              <Route path="/usuarioInterno/equipos/inscrbir" element={<New />} />
               <Route path="/registroJugador" element={<RegisitroJugadores />} />    
               <Route path="/usuarioInterno" element={<UsuarioI />} />
-              <Route path="/administrador" element={<Home />}/>
+              <Route path="/equipos/registrados" element={<Home />} exacta />
+              <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
+              <Route path="/administrador/usuariosExternos" element={<UsuarioExterno />} exacta />
+
               <Route path="*" element={<NoFount />} />
             
             </Routes>

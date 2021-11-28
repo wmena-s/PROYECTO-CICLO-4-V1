@@ -10,7 +10,8 @@
 
 .formulario{
     border-radius: 12px;
-    
+    background: blue;
+    padding: 20px;
 }
 
 
@@ -19,3 +20,6 @@
     align-items: flex-start;
 }
 
+.ajustarIzq{
+    text-align: start;
+}

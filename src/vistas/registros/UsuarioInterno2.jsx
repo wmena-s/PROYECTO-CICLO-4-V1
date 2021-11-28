@@ -1,8 +1,7 @@
 import './usuarioInterno.css'
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import Constantes from "../Constantes";
 import Axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
 
 
 const UsuarioInterno = () => {
@@ -63,7 +62,7 @@ const UsuarioInterno = () => {
                     onChange={manejarcambio}>
                     </input>
                     
-                    <label className="label" htmlFor="usuario">usuario:</label>
+                    <label className="label" htmlFor="usuario">Usuario:</label>
                     <input
                     name="usuario" 
                     className="form-control"
