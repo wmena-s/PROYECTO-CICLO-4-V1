@@ -53,8 +53,12 @@ class New extends React.Component {
                             <input className="form-control" type="text" placeholder="campeonato" id="campeonato" name="campeonato" onChange={this.manejarCambio} value={this.state.equipo.campeonato} ></input>
                         </div>
                         <div className="col-6">
-                            <label className="label" htmlFor="nombreEquipo">nombreEquipo:</label> 
+                            <label className="label" htmlFor="nombreEquipo">nombre de equipo:</label> 
                             <input className="form-control" type="text" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
+                        </div>
+                        <div className="col-6">
+                            <label className="label" htmlFor="imagen">imagen:</label> 
+                            <input className="form-control" type="text" placeholder="nombreEquipo" id="imagen"  name="imagen" onChange={this.manejarCambio} value={this.state.equipo.imagen} ></input>
                         </div>
                         <label>acepto terminos y condiciones</label>
                         <div className="ajustarIzq">

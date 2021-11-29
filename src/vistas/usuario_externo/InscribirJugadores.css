@@ -1,0 +1,28 @@
+.contenedorv1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color:aqua;
+    margin: 0rem 10rem;
+    border-radius: 1rem;
+    
+}
+
+.contenedorv1 div{
+    display: flex;
+    justify-content: center;
+    /*background-color: red;*/
+    padding: 0.2em;
+    border-radius: 2em;
+    margin: 0.2em;
+}
+
+.contenedorv1 div li{
+    padding: 0.2em;
+    margin: 0.2em;
+    }
+
+.contenedorv1 div button{
+    padding: 0.2em;
+    margin: 0.2em;
+
+}
