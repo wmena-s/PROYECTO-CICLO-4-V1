@@ -1,5 +1,5 @@
 const mongoose = require('../conexion_mongo');  
-const CrearEquipo = mongoose.model('Equipos', {
+const usuarioExterno = mongoose.model('usuarioExterno', {
     nombre: {
         type: String,
         required: true,
@@ -12,16 +12,12 @@ const CrearEquipo = mongoose.model('Equipos', {
         type: String,
         required: true,
     },
-    campeonato: {
+    contraseña: {
         type: String,
-        required: true,
-    },
-    nombreEquipo: {
-        type: String,
-        required: true,
+        required: true, 
     },
 });
 
-module.exports = CrearEquipo;
+module.exports = usuarioExterno;
 
 

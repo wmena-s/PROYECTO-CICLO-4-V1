@@ -4,7 +4,8 @@ import Navegacion from './vistas/Navegacion'
 import Inicio from './vistas/Inicio'
 import NoFount from './vistas/NoFount'
 import UsuarioI from './vistas/registros/UsuarioInterno';
-import RegisitroJugadores from './vistas/RegisitroJugadores';
+import UsuarioE from './vistas/registros/UsuarioExterno';
+import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
 import Campeonatos from './vistas/usuario_externo/Capeonatos'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
@@ -22,8 +23,9 @@ function App() {
             <Routes>  
               <Route path="/" element={<Inicio />}/>
               <Route path="/usuarioInterno/equipos/inscrbir" element={<New />} />
-              <Route path="/RegisitroJugadores" element={<RegisitroJugadores />} />    
+              <Route path="/usuario_externo/RegisitroJugadores" element={<RegisitroJugadores />} />    
               <Route path="/usuarioInterno" element={<UsuarioI />} />
+              <Route path="/usuarioExterno" element={<UsuarioE />} />
               <Route path="/equipos/registrados" element={<Home />} exacta />
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />

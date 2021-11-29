@@ -3,7 +3,7 @@ import React from 'react';
 import Constantes from "../../Constantes";
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Home from '../usuario_externo/Home'
 
 class New extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class New extends React.Component {
                 "nombre": "",
                 "usuario": "",
                 "correo": "",
-                "contraseña": "",
+                "campeonato": "",
                 "nombreEquipo": "",
             },
         };
@@ -29,13 +29,15 @@ class New extends React.Component {
                 <h1>
                   REGISTRO DE EQUIPOS
                 </h1>
-                <div>
-                    <p>Registra aqui tu equipo de futbol</p>
+                
+                <div className="columnas">
+                
                     <div className="container formulario">
+                    <p>Registra aqui tu equipo de futbol</p>
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
                         <div className="row">
                         <div className="col-6">
-                            <label className="label" htmlFor="nombre">Nombre:</label> 
+                            <label className="label" htmlFor="nombre">tecnico:</label> 
                             <input className="form-control" type="text" placeholder="Nombre" id="nombre" name="nombre" onChange={this.manejarCambio} value={this.state.equipo.nombre} ></input>
                         </div>
                         <div className="col-6">
@@ -47,8 +49,8 @@ class New extends React.Component {
                             <input className="form-control" type="email" placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
                         </div>
                         <div className="col-6">
-                            <label className="label" htmlFor="contraseña">contraseña:</label>
-                            <input className="form-control" type="password" placeholder="contraseña" id="contraseña" name="contraseña" onChange={this.manejarCambio} value={this.state.equipo.contraseña} ></input>
+                            <label className="label" htmlFor="campeonato">campeonato:</label>
+                            <input className="form-control" type="text" placeholder="campeonato" id="campeonato" name="campeonato" onChange={this.manejarCambio} value={this.state.equipo.campeonato} ></input>
                         </div>
                         <div className="col-6">
                             <label className="label" htmlFor="nombreEquipo">nombreEquipo:</label> 
@@ -57,11 +59,17 @@ class New extends React.Component {
                         <label>acepto terminos y condiciones</label>
                         <div className="ajustarIzq">
                         <button className="btn btn-danger col-3">Guardar</button> </div>
+                        <p>NOTA: solo puede inscribirse un equipo</p>
                         </div>
                     </form>
                     </div>
+                    <div>
+                        {/* agrega un componente lateral con los equipos registrados */}
+                         <Home/>
+                     </div>
                 </div>
-             
+                
+
               </header>
             </div>
           );
@@ -93,7 +101,7 @@ class New extends React.Component {
                     nombre: "",
                     usuario: "",
                     correo: "",
-                    contraseña: "",
+                    campeonato: "",
                     nombreEquipo: "p"
                 }
             });

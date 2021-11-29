@@ -1,27 +1,27 @@
 const mongoose = require('../conexion_mongo');  
-const CrearEquipo = mongoose.model('Equipos', {
+const jugador = mongoose.model('jugadores', {
     nombre: {
         type: String,
         required: true,
     },
-    usuario: {
+    cedula: {
+        type: Number,
+        required: true,
+    },
+    edad: {
         type: String,
         required: true,
     },
-    correo: {
+    equipo: {
         type: String,
-        required: true,
+        default: "",
     },
     campeonato: {
         type: String,
-        required: true,
-    },
-    nombreEquipo: {
-        type: String,
-        required: true,
-    },
+        default: "",
+    }
 });
 
-module.exports = CrearEquipo;
+module.exports = jugador;
 
 

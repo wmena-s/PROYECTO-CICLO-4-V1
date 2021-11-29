@@ -11,7 +11,7 @@ router.post('/', async function(req, res){
     nombre: req.body.nombre,
     usuario: req.body.usuario,
     correo: req.body.correo,
-    contraseña: req.body.contraseña,
+    campeonato: req.body.campeonato,
     nombreEquipo: req.body.nombreEquipo
   });
   await equipo.save();
@@ -38,7 +38,7 @@ router.put('/', async function(req, res){
     nombre: req.body.nombre,
     usuaro: req.body.usuario,
     correo: req.body.correo,
-    contraseña: req.body.contraseña,
+    campeonato: req.body.campeonato,
     nombreEquipo: req.body.nombreEquipo
   });
   res.send(true);

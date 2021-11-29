@@ -1,0 +1,10 @@
+POST http://localhost:5000/jugadores
+content-type: application/json
+
+{
+    "nombre": "h2ssssssssss2222222",
+    "cedula": "hoasdfla",
+    "edad": "req.badfody.corre",
+    "campeonado": "req.body.contraseña",
+    "equipo": "adjfsdlkfh"
+}

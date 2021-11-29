@@ -7,6 +7,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var jugadorRouter = require('./routes/equipo');
 var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
+var usuarioExterno = require('./routes/usuariosExterno');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
+var jugadores = require('./routes/jugadores')
 
 var app = express();
 // inicio: permite hacer llamados de react desde otro direccion (5000) a la 3000 de la api
@@ -29,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', usersRouter);
 app.use('/registros', jugadorRouter)
 app.use('/usuarioInterno', usuarioInterno )
+app.use('/usuarioExterno', usuarioExterno )
+app.use('/jugadores', jugadores )
 app.use('/', indexRouter);
 
 
