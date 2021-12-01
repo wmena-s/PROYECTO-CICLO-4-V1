@@ -1,0 +1,21 @@
+.contenedor{
+    align-content: center;
+    margin: 20px;
+}
+
+
+.formulario-n1{
+    display: flex;
+}
+
+
+
+
+.etiqueta{
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.ajustarIzq{
+    text-align: start;
+}
