@@ -24,8 +24,8 @@ class New extends React.Component {
 
     render(){
         return (
-            <div className="App">
-              <header className="App-header">
+            <div className="App ">
+              <header className="App-header divv">
                 <h1>
                   REGISTRO DE EQUIPOS
                 </h1>
@@ -33,7 +33,6 @@ class New extends React.Component {
                 <div className="columnas">
                 
                     <div className="container formulario">
-                    <p>Registra aqui tu equipo de futbol</p>
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
                         <div className="row">
                         <div className="col-6">
@@ -57,13 +56,16 @@ class New extends React.Component {
                             <input className="form-control" type="text" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>
                         </div>
                         <div className="col-6">
-                            <label className="label" htmlFor="imagen">imagen:</label> 
-                            <input className="form-control" type="text" placeholder="nombreEquipo" id="imagen"  name="imagen" onChange={this.manejarCambio} value={this.state.equipo.imagen} ></input>
-                        </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile"></label>
+                                <input type="file" class="form-control-file" id="exampleInputFile" />
+                                <p class="help-block">  </p>
+                            </div> 
+                         </div>
                         <label>acepto terminos y condiciones</label>
                         <div className="ajustarIzq">
                         <button className="btn btn-danger col-3">Guardar</button> </div>
-                        <p>NOTA: solo puede inscribirse un equipo</p>
+                      {/*<p>NOTA: solo puede inscribirse un equipo</p> */}  
                         </div>
                     </form>
                     </div>

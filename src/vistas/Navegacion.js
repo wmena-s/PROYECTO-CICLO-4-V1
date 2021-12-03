@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import './Nav.css'
-import { Navbar, Nav, } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 class Navegacion extends React.Component {
     constructor(props) {
@@ -51,14 +51,28 @@ class Navegacion extends React.Component {
                         {/*<Nav.Link as={NavLink} to="/equipos/registrados">UE registrados</Nav.Link>*/} 
                     </Nav>
                     <Nav className="USUARIO EXTERNO">
-                        <Nav.Link as={NavLink} to="/usuario_externo/equipos/inscrbir">UE inscribir E</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuario_externo/RegisitroJugadores">Registrar</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuarioInterno">UI registrar</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuarioExterno">UE registrar</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuario_externo/equipos/InscribirJugadores">Inscribir Jugadores</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuarioInterno/campeonato">Campeonato</Nav.Link>
-                        <Nav.Link as={NavLink} to="/usuario_externo/UsuariosRegistrados">usuarios Externos Registrados</Nav.Link>
-                        
+                        {/*<Nav.Link as={NavLink} to="/usuario_externo/equipos/inscrbir">UE inscribir E</Nav.Link>*/}
+                        {/*<Nav.Link as={NavLink} to="/usuario_externo/RegisitroJugadores">Registrar</Nav.Link>*/}
+                         {/*} <Nav.Link as={NavLink} to="/usuarioInterno">UI registrar</Nav.Link>*/}
+                         <Nav.Link as={NavLink} to="/home/homeUE">Usuario Externo</Nav.Link>
+                        <NavDropdown title="Usuario Externo Opciones" id="navUsuarioExterno">
+                            <NavDropdown.Item href="/usuario_externo/equipos/InscribirJugadores">UE inscribir Jugadores</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuario_externo/equipos/inscrbir">UE inscribir E</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuario_externo/RegisitroJugadores">Registrar</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                        {/*<Nav.Link as={NavLink} to="/usuarioExterno">UE registrar</Nav.Link>*/}
+                        {/*<Nav.Link as={NavLink} to="/usuario_externo/equipos/InscribirJugadores">Inscribir Jugadores</Nav.Link>*/}
+                    <Nav className="USUARIO INTERNO">
+                        <NavDropdown title="usuario Interno" id="navUsuarioInterno">
+                            <NavDropdown.Item href="/usuarioInterno/campeonato">campeonato</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuarioInterno">UI registrar</NavDropdown.Item>  
+                        </NavDropdown>
+                    </Nav>
+                    <Nav className="USUARIO ADMINISTRADOR">
+                        <NavDropdown title="usuario Administrador" id="navUsuarioAdministrador">
+                            <NavDropdown.Item href="/usuario_externo/UsuariosRegistrados">usuario Registrados</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                     <Nav>
                         <Nav.Link as={NavLink} to="/" ><abbr title ="Dar clic si desea salir de la aplicaion.">Salir</abbr> </Nav.Link>

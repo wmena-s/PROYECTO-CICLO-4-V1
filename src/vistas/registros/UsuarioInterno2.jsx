@@ -1,8 +1,8 @@
 import './usuarioInterno.css'
 import React, { useState } from 'react';
-import Constantes from "../Constantes";
-import Axios from 'axios';
+import Constantes from "../../Constantes";
 
+//------------------------------------registrar usuarios usando HOOK ---------------------------
 
 const UsuarioInterno = () => {
 
@@ -15,11 +15,19 @@ const UsuarioInterno = () => {
         contraseña: '',
     });
     
-    //agregar valores
+    //agregar valores 
     const  manejarcambio=(evento)=>{
         setDatos({
             ...datos,
             [evento.target.name]: evento.target.value
+        });
+    }
+
+    //agrega valores booleanos
+    const  manejarChekeo=(evento)=>{
+        setDatos({
+            ...datos,
+            [evento.target.name]: evento.target.checked
         });
     }
 
@@ -28,19 +36,23 @@ const UsuarioInterno = () => {
      try {
         evento.preventDefault();
         console.log(datos)
-        await Axios.post(`${Constantes.RUTA_API2}`, 
+        /*await Axios.post(`${Constantes.RUTA_API2}`, 
             {
-                body: 
-                     {
-                        "nombre": "asdfa",
-                        "usuario": "asdf",
-                        "correo": "asdf",
-                        "contraseña": "asf"
-                      },
-                    
-               
+                body: JSON.stringify(datos),
                 headers: {'Content-Type' : 'application/json'},
+            })*/
+            const respuesta = await fetch(`${Constantes.RUTA_API2}`, {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {
+                    'Content-Type' : 'application/json',
+                }
             });
+            const exitoso = await respuesta.json();
+            if (exitoso) {
+               alert("finalizado    ")
+            }
+
         }catch(error){
             console.log(error);
         }

@@ -26,3 +26,11 @@
     margin: 0.2em;
 
 }
+
+.titulo1{
+    color:blue;
+}
+
+.contenedor1{
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+}

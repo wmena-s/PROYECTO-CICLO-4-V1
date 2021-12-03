@@ -52,8 +52,7 @@ export default class Home extends Component{
                         
                          */}
                          <div className="row">
-                            <h1>EQUIPOS INSCRITOS</h1>
-
+                           
                             <div className="row text-center">
                                 {
                                     this.state.users.map(user=>

@@ -1,11 +1,9 @@
 .col-sm-3{
     background-color:azure;
-    border-color: blue;
+    border-color: red;
     border-radius: .5rem;
 }
 
-.row{
-}
 
 h1{
     font-family: 'Comforter', cursive;

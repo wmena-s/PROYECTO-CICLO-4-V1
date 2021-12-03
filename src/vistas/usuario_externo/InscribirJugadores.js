@@ -1,11 +1,12 @@
 import React from "react"
 import './InscribirJugadores.css'
-import '../Nav.css'
+
 
 const InscribirJugadores = () => {
     return (
         <>
-        <h1>JUGADORES </h1>
+        <div className="contenedor1">
+        <h1 className="titulo1">JUGADORES </h1>
         <p>agregar jugadores al equipo</p>
 
         <div className="contenedorv1">
@@ -24,6 +25,7 @@ const InscribirJugadores = () => {
                 <button class="btn btn-primary" class="btn btn-primary">añadir</button>
                 <button class="btn btn-primary" class="btn btn-danger">eliminar</button>
             </div>
+        </div>
         </div>
         </>
        )
