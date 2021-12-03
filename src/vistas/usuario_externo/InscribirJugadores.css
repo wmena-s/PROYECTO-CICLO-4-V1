@@ -8,18 +8,29 @@
 }
 
 .contenedorv1 div{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     /*background-color: red;*/
     padding: 0.2em;
     border-radius: 2em;
     margin: 0.2em;
+    width: 100%;
+    height: 100%;
 }
 
-.contenedorv1 div li{
-    padding: 0.2em;
-    margin: 0.2em;
+.contenedorv1 div div{
+    display: grid;
+    grid-template-columns: 1fr;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
     }
+
+    
+
+
+
 
 .contenedorv1 div button{
     padding: 0.2em;
@@ -34,3 +45,8 @@
 .contenedor1{
     background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
 }
+
+p{
+    color:azure;
+}
+

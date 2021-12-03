@@ -16,6 +16,8 @@ import UsuarioExterno0 from './vistas/home/HomeUE'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Modals from './vistas/modal/Modals'
 import HomeUE from './vistas/home/HomeUE';
+import { Abajo } from './vistas/plantillas/Abajo';
+
 function App() {
   return (
     <div className="App">
@@ -38,6 +40,7 @@ function App() {
               <Route path="*" element={<NoFount />} />
             
             </Routes>
+            <Abajo></Abajo>
             </BrowserRouter>,
       
             

@@ -26,7 +26,7 @@ const HomeUE = () => {
                      <ModalRegistrar/>
                 </div>
                 <div className="colormodal">
-                    <h1>Inscribir equipos</h1>
+                    <h1>Lista de jugadores</h1>
                     <img src='https://pre00.deviantart.net/a8d8/th/pre/i/2016/345/2/4/james_harden_by_irockmedia-dar8t3p.jpg ' alt="animals"></img>
                      <ModalRegistrar2></ModalRegistrar2>
                 </div>
