@@ -3,6 +3,7 @@ import {useModal} from '../../funcionalidades/useModal'
 import RegisitroJugadores from '../registros/RegisitroJugadores';
 import New from '../registros/New';
 import UsuarioInterno2 from '../registros/UsuarioInterno2';
+import UsuarioExterno from '../registros/UsuarioExterno';
 import './Modal.css'
 import InscribirJugadores from '../usuario_externo/InscribirJugadores';
 
@@ -72,5 +73,20 @@ export const ModalRegistrar2 = () => {
 
 }
 
+export const UsuarioExternos = () => {
+    const [isOpenModal2, openModal2, closeModal2]=useModal(false);
+    return (
+        <>
+
+        <div>
+            <button onClick={openModal2} className="btn-primary boton1">REGISTRAR USUARIO EXTERNO</button>
+            <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
+                <UsuarioExterno></UsuarioExterno>
+            </Modal>
+        </div>
+        </>
+    )
+
+}
 
 

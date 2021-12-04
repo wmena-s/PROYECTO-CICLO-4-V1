@@ -1,6 +1,7 @@
 import {Carousel} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Nav.css'
+import {UsuarioExternos} from '../vistas/modal/Modals'
 
 const Inicio = () => {
     return (
@@ -13,8 +14,9 @@ const Inicio = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p className="color">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Registrar Usuario Externo</h3>
+      <p className="color">Tienes un equipo y deseas participar de los campeonatos LIICA, registrate como usuario externo.</p>
+      <UsuarioExternos/>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

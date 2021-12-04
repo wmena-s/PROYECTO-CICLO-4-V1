@@ -1,3 +1,15 @@
+.img-abajo{
+    max-width: 100px;
+    max-height: 100px;
+}
+
 .color-fondo{
-    background-color: brown;
+    background-color: blue ;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.color-fondo article:hover{
+    background-color: yellow;
+
 }

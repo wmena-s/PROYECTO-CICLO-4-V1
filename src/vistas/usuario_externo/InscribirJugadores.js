@@ -7,7 +7,7 @@ import './InscribirJugadores.css'
 const InscribirJugadores = () => {
     return (
         <>
-        <div className="contenedor1">
+        <div className="contenedor1 otro">
         <h1 className="titulo1">--LISTA DE JUGADORES-- </h1>
         
         <div className="contenedorv1">

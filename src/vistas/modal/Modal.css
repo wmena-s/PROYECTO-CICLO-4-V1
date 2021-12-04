@@ -32,13 +32,30 @@
     right: 1rem;
 }
 
-.boton1{
+/*.boton1{
     border-radius: 1rem;
     margin: 1rem;
     content: start;
     padding: 0.5rem;
     width: 50%;
+}*/
+
+.boton1{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 250px;
+    background: white;
+    border-radius: 75px;
+    transition: 1s box-shadow;
 }
+
+.boton1:hover{
+    box-shadow: 0 5px 35px 0px
+    rgba(0,0,0,1)
+}
+
 
 .colorModal{
     background-color: aqua;

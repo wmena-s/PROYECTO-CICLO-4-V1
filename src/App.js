@@ -16,7 +16,7 @@ import UsuarioExterno0 from './vistas/home/HomeUE'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Modals from './vistas/modal/Modals'
 import HomeUE from './vistas/home/HomeUE';
-import { Abajo } from './vistas/plantillas/Abajo';
+import { Abajo } from './vistas/plantillas/Abajo.jsx';
 
 function App() {
   return (
