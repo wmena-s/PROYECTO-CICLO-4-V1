@@ -1,7 +1,6 @@
 .contenedorv1{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color:aqua;
     margin: 0rem 10rem;
     border-radius: 1rem;
     
@@ -9,7 +8,7 @@
 
 .contenedorv1 div{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     /*background-color: red;*/
     padding: 0.2em;
@@ -19,6 +18,7 @@
     height: 100%;
 }
 
+
 .contenedorv1 div div{
     display: grid;
     grid-template-columns: 1fr;
@@ -27,9 +27,15 @@
     height: 100%;
     }
 
+    /*prueba de maquetación*/
+.contenedor1 div div li:nth-child(2n+1){
+    background-color: gainsboro;
     
-
-
+}
+.contenedor1 div div li:nth-child(even){
+    background-color: blue;
+}
+/*prueba fin */
 
 
 .contenedorv1 div button{
@@ -51,3 +57,15 @@ p{
 }
 
 
+.img-clase{
+    justify-self: center;
+    border-radius: 20%;
+}
+
+.contenedorv1 div div li:hover{
+    background-color: deeppink;
+}
+
+.contenedor1 div div{
+    max-height: 200px;
+}
