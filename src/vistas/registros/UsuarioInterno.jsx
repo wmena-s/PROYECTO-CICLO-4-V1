@@ -19,6 +19,8 @@ class New extends React.Component {
         this.manejarEnvioDeFormulario = this.manejarEnvioDeFormulario.bind(this);
     }
 
+    
+  
 
     render(){
         return (

@@ -1,7 +1,7 @@
 .contenedorv1{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin: 0rem 10rem;
+    margin: 0rem 0rem;
     border-radius: 1rem;
     
 }
@@ -12,7 +12,7 @@
     justify-content: center;
     /*background-color: red;*/
     padding: 0.2em;
-    border-radius: 2em;
+    border-radius: 0.5em;
     margin: 0.2em;
     width: 100%;
     height: 100%;
@@ -25,6 +25,7 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
+    padding: 0rem;
     }
 
     /*prueba de maquetación*/
@@ -50,6 +51,15 @@
 
 .contenedor1{
     background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+
+}
+.contenedor1 div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contenedor1 div div:hover{
+    background-color: red;
 }
 
 p{
@@ -60,6 +70,10 @@ p{
 .img-clase{
     justify-self: center;
     border-radius: 20%;
+}
+
+.div-clase:hover{
+    background-color: aqua;
 }
 
 .contenedorv1 div div li:hover{
