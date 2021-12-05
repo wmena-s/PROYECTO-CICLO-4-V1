@@ -10,6 +10,7 @@ import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
 import Campeonatos from './vistas/usuario_externo/Capeonatos'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
+
 //inicio de aplicacion.
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';

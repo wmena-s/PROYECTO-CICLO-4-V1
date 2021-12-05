@@ -5,7 +5,7 @@ const jugador = mongoose.model('jugadores', {
         required: true,
     },
     cedula: {
-        type: Number,
+        type: String,
         required: true,
     },
     edad: {
@@ -14,11 +14,11 @@ const jugador = mongoose.model('jugadores', {
     },
     equipo: {
         type: String,
-        default: "",
+        required: true,
     },
     campeonato: {
         type: String,
-        default: "",
+        required: true,
     }
 });
 

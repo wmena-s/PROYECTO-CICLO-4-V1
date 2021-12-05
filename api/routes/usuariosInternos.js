@@ -19,9 +19,9 @@ router.post('/', async function(req, res){
 
 // todos los jugadores
 router.get('/', async function (req, res) {
-    const jugador = await UsuarioInterno.find();
-    console.log(jugador)
-    res.send(jugador);
-  });
+  const jugador = await UsuarioInterno.find();
+  console.log(jugador);
+  res.send(jugador);
+});
 
 module.exports = router;

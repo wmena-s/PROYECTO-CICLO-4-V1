@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const jugadores  = require('../modelos/jugador');
+const jugadores  = require('../modelos/jugador.jsx');
 
 
 router.post('/', async function(req, res){
@@ -15,5 +15,12 @@ router.post('/', async function(req, res){
     await jugador.save();
     res.send(jugador)
   })
+
+// todos los jugadores
+router.get('/', async function (req, res) {
+  const jugadorU = await jugadores.find();
+  console.log(jugadorU);
+  res.send(jugadorU);
+});
 
 module.exports = router;

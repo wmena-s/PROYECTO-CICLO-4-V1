@@ -1,1 +1,1 @@
-GET http://localhost:5000/usuarioInterno
+GET http://localhost:5000/jugadores
