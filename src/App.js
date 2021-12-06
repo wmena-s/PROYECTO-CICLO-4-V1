@@ -10,13 +10,14 @@ import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
 import Campeonatos from './vistas/usuario_externo/Capeonatos'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
-
-//inicio de aplicacion.
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';
 import { Abajo } from './vistas/plantillas/Abajo.jsx';
 
+
+
 function App() {
+
   return (
     <div className="App">
       <div className="section">
@@ -36,14 +37,14 @@ function App() {
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
-            
             </Routes>
+     
             <Abajo></Abajo>
             </BrowserRouter>,
-      
-            
+         
             </div>
           </div>
+          
     </div>
   );
 }

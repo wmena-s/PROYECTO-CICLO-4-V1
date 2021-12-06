@@ -25,6 +25,7 @@ const Character = ({caracteres=[]}) => {
                             <li>campeonato: {item.campeonato}</li>
                         </div>
                         <img className="img-clase" src="https://i.pinimg.com/236x/9f/4e/c0/9f4ec0f8b45f868b7d77166177538610.jpg"></img>
+                        <article>
                         <button className="btn btn-primary">añadir</button>
                         <button 
                             className="btn btn-primary btn-danger btnEliminar" 
@@ -53,6 +54,7 @@ const Character = ({caracteres=[]}) => {
                             
 
                         >eliminar</button>
+                        </article>
                     </div>
 
                  ))

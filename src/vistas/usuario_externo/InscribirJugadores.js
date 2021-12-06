@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react"
 import Constantes from '../../Constantes'
 import Character from "./Character"
 import './InscribirJugadores.css'
-
+//import BarChart from '../../BarChart';
             {/* poner cuadro de busqued */
             /* quitar fondo azul */}
 
@@ -71,6 +71,9 @@ const InscribirJugadores = () => {
             </div>
              */}
             </div>
+            
+         {/**X   <BarChart />*/}
+            
         </div>
         </>
        )

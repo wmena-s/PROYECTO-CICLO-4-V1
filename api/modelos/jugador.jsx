@@ -14,11 +14,11 @@ const jugador = mongoose.model('jugadores', {
     },
     equipo: {
         type: String,
-        required: true,
+        default: "",
     },
     campeonato: {
         type: String,
-        required: true,
+        default: "",
     }
 });
 
