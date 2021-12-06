@@ -23,4 +23,10 @@ router.get('/', async function (req, res) {
   res.send(jugadorU);
 });
 
+// eliminar jugadores
+router.delete('/:id', async function (req, res){
+  await jugadores.findOneAndDelete({_id: req.params.id});
+  res.send(true);
+})
+
 module.exports = router;

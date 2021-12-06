@@ -1,23 +1,28 @@
 .contanedorgeneral{
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .contanedorgeneral div{
     padding: 1rem;
 }
+.contanedorgeneral div .form-group:hover{
+    background-color: rgb(255, 117, 117);
+}
 
 .contanedorgeneral div .form-group{
-    background-color: aqua;
+    background-color: rgb(47, 255, 255);
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 5px;
     margin: 0.5rem;
-    padding: 2%;
+    padding: 1%;
     color: black;
     justify-items: center;
+    
 }
 
 .App-header{
     background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+   /* background-image: url("https://image.freepik.com/vector-gratis/cielo-estelar-fondo-acuarela_125540-28.jpg");*/
 }
