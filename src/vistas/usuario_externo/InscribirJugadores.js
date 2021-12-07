@@ -29,14 +29,14 @@ const InscribirJugadores = () => {
     },[]);
 
     return (
+        
         <>
         <div className="contenedor1 otro">
             <h1 className="titulo1">--LISTA DE JUGADORES-- </h1>
             <p >listados de jugadores inscritos en el equipo: ---------------xxxxxxxxxxx-------------------</p>
             <div className="contenedorv1">
                 <Character caracteres={user}></Character>
-                <Chart caracteres={user}/>
-          {/**  <div>
+                      {/**  <div>
                 <div>
                     <p>DATOS JUGADOR</p>
                     <li>nombre: {user.name}</li>
@@ -75,7 +75,10 @@ const InscribirJugadores = () => {
             </div>
              */}
             </div>
-            
+            <div className="canvass">
+                <Chart x={user.map((item)=>(item.nombre))} y={user.map((item)=>(item.edad))} titulo="edad" namex="nombre" namey="edad"/>
+   
+            </div>
          {/**X   <BarChart />*/}
             
         </div>

@@ -1,19 +1,17 @@
 import './App.css';
 import {Bar, Pie, Doughnut} from 'react-chartjs-2'
 
-function ChartV({caracteres=[]}) {
-  caracteres.map((item)=>(item.nombre))
-  caracteres.map((item)=>(item.edad))
+function ChartV({x, y, titulo, namex, namey}) {
 
   return (
     <div className="App">
       <h1>EDADES DE JUGADORES</h1>
       <Bar
       data={{
-        labels: caracteres.map((item)=>(item.nombre)),
+        labels: x,
         datasets:[{
-          label:'edades',
-          data: caracteres.map((item)=>(item.edad)),
+          label: titulo,
+          data: y,
           backgroundColor:'red',
           barThickness:12
         }
@@ -36,7 +34,7 @@ function ChartV({caracteres=[]}) {
               color:'cyan'
             },
               scaleLabel:{
-                labelString:'Nombre',
+                labelString: namex,
                 display:true,
                 fontColor:'white',
                 fontSize:20
@@ -52,7 +50,7 @@ function ChartV({caracteres=[]}) {
               color:'cyan'
             },
             scaleLabel:{
-                labelString:'Edad',
+                labelString:namey,
                 display:true,
                 fontColor:'white',
                 fontSize:20,
