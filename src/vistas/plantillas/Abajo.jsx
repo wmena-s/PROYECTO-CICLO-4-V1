@@ -1,11 +1,16 @@
 import { width } from 'dom-helpers'
 import './abajo.css'
+import {Politicas} from '../modal/Modals'
+import {PoliticasDoss} from '../modal/Modals'
+
+
 export const Abajo = () => {
     return (
 
         <div className="color-fondo">
             <article>
-                <p>información de la empresa</p>
+                <a> <Politicas></Politicas></a>
+               <a> <PoliticasDoss></PoliticasDoss></a>
             </article>
             <article>
                 <p>datos generales de la empresa</p>

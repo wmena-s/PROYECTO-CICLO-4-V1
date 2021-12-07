@@ -2,10 +2,13 @@ import Modal from './Modal';
 import {useModal} from '../../funcionalidades/useModal'
 import RegisitroJugadores from '../registros/RegisitroJugadores';
 import New from '../registros/New';
-import UsuarioInterno2 from '../registros/UsuarioInterno2';
+import UsuarioInterno2 from '../registros/UsuarioInterno';
 import UsuarioExterno from '../registros/UsuarioExterno';
 import './Modal.css'
 import InscribirJugadores from '../usuario_externo/InscribirJugadores';
+import Politica from '../../vistas/plantillas/Politica'
+import PoliticasDos from '../../vistas/plantillas/PoliticasDos'
+import { controllers } from 'chart.js';
 
 export const Modals = () => {
     const [isOpenModal1, openModal1, closeModal1]=useModal(false);
@@ -73,6 +76,7 @@ export const ModalRegistrar2 = () => {
 
 }
 
+
 export const UsuarioExternos = () => {
     const [isOpenModal2, openModal2, closeModal2]=useModal(false);
     return (
@@ -89,4 +93,37 @@ export const UsuarioExternos = () => {
 
 }
 
+export const Politicas = () => {
+    const [isOpenModal3, openModal3, closeModal3]=useModal(false);
+    return (
+        <>
 
+        <div>
+            <label style={{color:"black"}}>Políticas de tratamiento de datos personales</label>
+            <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
+                <Politica></Politica>
+            </Modal>
+            <p onClick={openModal3} style={{background:"red", color:"white"}} >clic aquí</p>
+        </div>
+        </>
+    )
+
+}
+
+
+export const PoliticasDoss = () => {
+    const [isOpenModal4, openModal4, closeModal4]=useModal(false);
+    return (
+        <>
+
+        <div>
+            <label style={{color:"black"}}>Aviso de privacidad</label>
+            <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
+                <PoliticasDos></PoliticasDos>
+            </Modal>
+            <p onClick={openModal4} style={{background:"red", color:"white"}} >clic aquí</p>
+        </div>
+        </>
+    )
+
+}

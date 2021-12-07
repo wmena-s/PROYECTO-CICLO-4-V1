@@ -35,6 +35,7 @@ function App() {
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
+              <Route path='/equipos/InscribirJugadores' element={<InscribirJugadores/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
             </Routes>

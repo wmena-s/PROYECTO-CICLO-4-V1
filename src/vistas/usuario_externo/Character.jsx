@@ -18,11 +18,17 @@ const Character = ({caracteres=[]}) => {
                  caracteres.map((item)=>(
                     <div>
                         <div>
+                            
                             <p>DATOS JUGADOR: {item.nombre}</p>
-                            <li>id: {item._id}</li>
-                            <li>cedula: {item.cedula}</li>
-                            <li>edad: {item.edad}</li>
-                            <li>campeonato: {item.campeonato}</li>
+                            <a><label>ID</label>
+                            <li>{item._id}</li></a>
+                            <a><label>CEDULA</label>
+                            <li>{item.cedula}</li></a>
+                            <a><label>EDAD</label>
+                            <li>{item.edad}</li></a>
+                            <a><label>CAMPEONATO</label>
+                            <li>{item.campeonato}</li></a>
+                            
                         </div>
                         <img className="img-clase" src="https://i.pinimg.com/236x/9f/4e/c0/9f4ec0f8b45f868b7d77166177538610.jpg"></img>
                         <article>

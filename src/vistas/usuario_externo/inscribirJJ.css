@@ -1,17 +1,20 @@
 .containerr{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1px;
-
+    grid-gap: 2px;
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+    
 }
 
 .containerr div{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 500px;
-    height: 500px;
+    width: 1fr;
+    height: 1fr;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2%;
 }
 
 .containerr div div{
@@ -32,6 +35,11 @@
     width: 50%;
     height: 100%;
 }
+
+.containerr div img{
+    position: relative;
+}
+
 .containerr div article{
     grid-column: 1/3;
 }
@@ -46,36 +54,27 @@
 .containerr div div div:nth-child(2n){
     display: grid;
     grid-template-rows: 1fr;
-
 }
 
-.containerr div div div:nth-child(2n){  
+
+.containerr div div a{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-.containerr div div li{
-    display: flex;
-    align-items: flex-end;
-    margin: 1rem;
-    color: white;
-
+.containerr div div a:nth-child(2n){
+    background-color: gainsboro;   
 }
 
-.containerr div div li:nth-child(2n){
-    
-}
-
-.containerr div div li:nth-child(2n+1){
-}
-.containerr{
-    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
-
+.containerr div div a:nth-child(2n+1){
+    background-color: blue;
 }
 
 .containerr div:hover{
     background-color: red;
 }
 
-.contenedorv1 div div li:hover{
+.contenedorv1 div div a:hover{
     background-color: deeppink;
 }
 
