@@ -9,6 +9,7 @@ import InscribirJugadores from './vistas/usuario_externo/InscribirJugadores';
 import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
 import Campeonatos from './vistas/usuario_externo/Capeonatos'
+import Dashboard from './vistas/administrador/Dashboard'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';
@@ -36,6 +37,7 @@ function App() {
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
               <Route path='/equipos/InscribirJugadores' element={<InscribirJugadores/>} exacta />
+              <Route path='/administrador/Dashboard' element={<Dashboard/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
             </Routes>
