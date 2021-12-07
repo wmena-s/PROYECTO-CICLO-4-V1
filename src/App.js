@@ -17,7 +17,7 @@ import { Abajo } from './vistas/plantillas/Abajo.jsx';
 
 
 function App() {
-
+  
   return (
     <div className="App">
       <div className="section">
@@ -39,7 +39,7 @@ function App() {
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
             </Routes>
-     
+
             <Abajo></Abajo>
             </BrowserRouter>,
          
