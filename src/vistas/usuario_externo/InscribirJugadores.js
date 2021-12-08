@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from "react"
 import Constantes from '../../Constantes'
-import Character from "./Character"
+/* import Character from "./Character" */
 import './InscribirJugadores.css'
 //import BarChart from '../../BarChart';
             {/* poner cuadro de busqued */
@@ -31,7 +31,7 @@ const InscribirJugadores = () => {
             <h1 className="titulo1">--LISTA DE JUGADORES-- </h1>
             <p >listados de jugadores inscritos en el equipo: ---------------xxxxxxxxxxx-------------------</p>
             <div className="contenedorv1">
-                <Character caracteres={user}></Character>
+                {/* <Character caracteres={user}></Character> */}
           {/**  <div>
                 <div>
                     <p>DATOS JUGADOR</p>
