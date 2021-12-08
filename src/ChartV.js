@@ -1,11 +1,11 @@
-import './App.css';
-import {Bar, Pie, Doughnut} from 'react-chartjs-2'
+import 'chart.js/auto';
+import { Bar, getDatasetAtEvent } from 'react-chartjs-2';
 
 function ChartV({x, y, titulo, namex, namey}) {
 
   return (
     <div className="App">
-      <h1>EDADES DE JUGADORES</h1>
+      <h1>Edad de los jugadores</h1>
       <Bar
       data={{
         labels: x,

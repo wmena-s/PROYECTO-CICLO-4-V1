@@ -1,11 +1,11 @@
-import './New.css';
+import './RegistroDeEquipos.css';
 import React from 'react';
 import Constantes from "../../Constantes";
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Home from '../usuario_externo/Home'
+import InfoEquipo from '../usuario_externo/InfoEquipo'
 
-class New extends React.Component {
+class RegistroDeEquipos extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -71,7 +71,7 @@ class New extends React.Component {
                     </div>
                     <div>
                         {/* agrega un componente lateral con los equipos registrados */}
-                         <Home/>
+                         <InfoEquipo/>
                      </div>
                 </div>
                 
@@ -108,7 +108,7 @@ class New extends React.Component {
                     usuario: "",
                     correo: "",
                     campeonato: "",
-                    nombreEquipo: "p"
+                    nombreEquipo: ""
                 }
             });
         } else {
@@ -131,4 +131,4 @@ class New extends React.Component {
 
 }
 
-export default New;
+export default RegistroDeEquipos;

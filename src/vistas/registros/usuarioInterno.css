@@ -21,7 +21,7 @@
     padding: 0px 50px;
 }
 
-/*usado en New para dividir las columnas de registro de usuario y visualizar equipo registrado*/
+/*usado en RegistroDeEquipos para dividir las columnas de registro de usuario y visualizar equipo registrado*/
 .columnas{
     display: grid;
     grid-template-columns: 1fr 1fr;

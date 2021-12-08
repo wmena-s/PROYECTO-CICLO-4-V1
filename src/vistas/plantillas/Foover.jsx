@@ -1,10 +1,10 @@
 import { width } from 'dom-helpers'
-import './abajo.css'
+import './foover.css'
 import {Politicas} from '../modal/Modals'
 import {PoliticasDoss} from '../modal/Modals'
 
 
-export const Abajo = () => {
+export const Foover = () => {
     return (
 
         <div className="color-fondo">

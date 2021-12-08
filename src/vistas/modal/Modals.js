@@ -1,11 +1,11 @@
 import Modal from './Modal';
 import {useModal} from '../../funcionalidades/useModal'
 import RegisitroJugadores from '../registros/RegisitroJugadores';
-import New from '../registros/New';
+import RegistroDeEquipos from '../registros/RegistroDeEquipos';
 import UsuarioInterno2 from '../registros/UsuarioInterno';
 import UsuarioExterno from '../registros/UsuarioExterno';
 import './Modal.css'
-import InscribirJugadores from '../usuario_externo/InscribirJugadores';
+import ListaJugadores from '../usuario_externo/ListaJugadores';
 import Politica from '../../vistas/plantillas/Politica'
 import PoliticasDos from '../../vistas/plantillas/PoliticasDos'
 import { controllers } from 'chart.js';
@@ -53,7 +53,7 @@ export const ModalRegistrar = () => {
         <div>
             <button onClick={openModal2} className="btn-primary boton1">INGRESAR</button>
             <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
-                <New></New>
+                <RegistroDeEquipos></RegistroDeEquipos>
             </Modal>
         </div>
         </>
@@ -68,7 +68,7 @@ export const ModalRegistrar2 = () => {
         <div>
             <button onClick={openModal2} className="btn-primary boton1">INGRESAR</button>
             <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
-                <InscribirJugadores></InscribirJugadores>
+                <ListaJugadores></ListaJugadores>
             </Modal>
         </div>
         </>
