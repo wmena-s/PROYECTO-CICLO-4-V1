@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from "react"
 import Constantes from '../../Constantes'
-import Character from "./Character"
+import Character from "./Character" 
 import './InscribirJugadores.css'
 import Chart from '../../ChartV'
 

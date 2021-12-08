@@ -32,6 +32,7 @@ const HomeUE = () => {
                 </div>
 
             </div>
+            
         </div>
     )
 }
