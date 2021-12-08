@@ -8,12 +8,12 @@ import UsuarioE from './vistas/registros/UsuarioExterno';
 import InscribirJugadores from './vistas/usuario_externo/InscribirJugadores';
 import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
-import crearCampeonatos from './vistas/usuarioInterno/crearCampeonato'
-import Campeonatos from './vistas/usuarioInterno/Campeonatos'
-import GestionarCampeonatos from './vistas/usuarioInterno/GestionarCampeonatos'
-import equiposInscritos from './vistas/usuarioInterno/equiposInscritos'
-import solicitudesEquipo from './vistas/usuarioInterno/solicitudesEquipo'
-import Enfrentamientos from './vistas/usuarioInterno/Enfrentamientos'
+// import crearCampeonatos from './vistas/usuarioInterno/crearCampeonato'
+// import Campeonatos from './vistas/usuarioInterno/Campeonatos'
+// import GestionarCampeonatos from './vistas/usuarioInterno/GestionarCampeonatos'
+// import equiposInscritos from './vistas/usuarioInterno/equiposInscritos'
+// import solicitudesEquipo from './vistas/usuarioInterno/solicitudesEquipo'
+// import Enfrentamientos from './vistas/usuarioInterno/Enfrentamientos'
 import Dashboard from './vistas/administrador/Dashboard'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -41,10 +41,10 @@ function App() {
               <Route path="/usuario_externo/equipos/InscribirJugadores" element={<InscribirJugadores/>} />
               <Route path="/equipos/registrados" element={<Home />} exacta />
               <Route path="/usuarioInterno/campeonato/crearCampeonato" element={<crearCampeonatos />} exacta />
-              <Route path="/usuarioInterno/campeonato/gestionar" element={<GestionarCampeonatos />} exacta />
+              {/* <Route path="/usuarioInterno/campeonato/gestionar" element={<GestionarCampeonatos />} exacta />
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
               <Route path="/usuarioInterno/equiposInscritos" element={<equiposInscritos />} exacta />
-              <Route path="/usuarioInterno/enfrentamientos" element={<Enfrentamientos />} exacta />
+              <Route path="/usuarioInterno/enfrentamientos" element={<Enfrentamientos />} exacta /> */}
               <Route path="/usuarioInterno/solicitudesEquipo" element={<solicitudesEquipo />} exacta />
               <Route path="/usuarioInterno" element={<HomeUI />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
