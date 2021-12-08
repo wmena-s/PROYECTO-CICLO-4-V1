@@ -1,6 +1,7 @@
 .contanedorgeneral{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: rgb(99, 170, 233);
 }
 
 .contanedorgeneral div{
@@ -23,6 +24,10 @@
 }
 
 .App-header{
-    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+    /* background: -webkit-linear-gradient(-45deg,black 15%,blue  100%); */
    /* background-image: url("https://image.freepik.com/vector-gratis/cielo-estelar-fondo-acuarela_125540-28.jpg");*/
+   background-image: url(https://previews.123rf.com/images/_ig0rzh_/_ig0rzh_1703/_ig0rzh_170300018/73633235-fondo-abstracto-de-los-deportes-baloncesto-y-rel%C3%A1mpago-azul-de-gran-alcance.jpg);
+   background-repeat: no-repeat;
+   background-position: right 75%;
+   background-size: 170%;
 }

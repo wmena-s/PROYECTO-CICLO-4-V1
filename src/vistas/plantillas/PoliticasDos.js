@@ -1,26 +1,26 @@
 const PoliticasDos = () => {
     return (
         <div>
-            <p>MARKETING PROCESOS Y GESTIÓN MAPROGES SAS, en lo sucesivo y para los términos de este contrato EL DEPORTIVO en su calidad de responsable de sus propias bases de datos y encargada de la administración de las bases de datos de los usuarios de la página web, cuando ellos hubieren suministrado sus datos exclusivamente, de las redes sociales twitter y Facebook, y cualquiera otra de su propiedad, informa:
+            <p style={{justifytems:"lingth"}}> <strong>MARKETING PROCESOS Y GESTIÓN MAPROGES SAS</strong> <br/> En lo sucesivo y para los términos de este contrato EL DEPORTIVO en su calidad de responsable de sus propias bases de datos y encargada de la administración de las bases de datos de los usuarios de la página web, cuando ellos hubieren suministrado sus datos exclusivamente, de las redes sociales twitter y Facebook, y cualquiera otra de su propiedad, informa:
 
 Que los datos suyos que están incluidos en nuestras bases de datos, y los que lleguen a adicionarse por usted, podrán ser usados para alguno o algunos de estos fines:
 
 Los datos personales que recabe EL DEPORTIVO se administrarán y se tratarán conforme a la gestión general de la empresa y tendrán el uso que se describe a continuación:
-
-( i ) identificarle;
-( ii ) ubicarle;
-( iii ) comunicarle;
-( iv ) contactarle;
-( v ) enviarle información de novedades en los contenidos,
-( vi ) enviarle el Newsletter de novedades de EL DEPORTIVO,
-( vii ) comunicarle promociones;
-( viii ) invitarle a participar en las redes sociales de EL DEPORTIVO u otras plataformas,
-( ix ) fines publicitarios;
-( x ) envío de notificaciones con respecto a cambios en este Aviso de Privacidad.
-( xi ) Evaluar la calidad de nuestros productos y el nivel de conocimiento que tienen los consumidores sobre ellos.
-( xii ) Realizar tratamiento estadístico de los datos de nuestros compradores y lectores
-( xiii ) Realizar estudios internos sobre hábitos de compra de los contenidos.
-( xiv ) Atender adecuadamente sus peticiones, solicitudes y reclamos.
+<br/>
+( i ) identificarle;<br/>
+( ii ) ubicarle;<br/>
+( iii ) comunicarle;<br/>
+( iv ) contactarle;<br/>
+( v ) enviarle información de novedades en los contenidos,<br/>
+( vi ) enviarle el Newsletter de novedades de EL DEPORTIVO,<br/>
+( vii ) comunicarle promociones;<br/>
+( viii ) invitarle a participar en las redes sociales de EL DEPORTIVO u otras plataformas,<br/>
+( ix ) fines publicitarios;<br/>
+( x ) envío de notificaciones con respecto a cambios en este Aviso de Privacidad.<br/>
+( xi ) Evaluar la calidad de nuestros productos y el nivel de conocimiento que tienen los consumidores sobre ellos.<br/>
+( xii ) Realizar tratamiento estadístico de los datos de nuestros compradores y lectores<br/>
+( xiii ) Realizar estudios internos sobre hábitos de compra de los contenidos.<br/>
+( xiv ) Atender adecuadamente sus peticiones, solicitudes y reclamos.<br/>
 Usted, como titular de sus datos, puede consultar la Política de Privacidad y Tratamiento de Datos Personales de EL DEPORTIVO mediante el acceso a nuestra página web www.eldeportivo.com.co, en donde se detalla el tratamiento, recolección, almacenamiento, uso y procesamiento de la información recogida, así como los procedimientos de consulta y reclamación que le permitirán hacer efectivos sus derechos al acceso, consulta, rectificación, actualización y supresión de los datos, en los términos que señale la ley.
 
 Esta página de Internet puede utilizar cookies que envían información a su computadora mientras que navega en nuestra página. Los cookies son únicos a su computadora y permiten al servidor de Internet recabar información que harán que su uso de la página sea más fácil y conveniente. Los cookies añaden conveniencia que le permiten ahorrar tiempo cuando regresa a esta página.

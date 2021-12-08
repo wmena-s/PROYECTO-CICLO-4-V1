@@ -3,9 +3,11 @@ import Constantes from '../../Constantes'
 import Character from "./Character"
 import './InscribirJugadores.css'
 import Chart from '../../ChartV'
+
 //import BarChart from '../../BarChart';
             {/* poner cuadro de busqued */
             /* quitar fondo azul */}
+            
           
 
 

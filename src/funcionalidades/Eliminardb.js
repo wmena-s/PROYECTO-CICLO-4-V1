@@ -1,12 +1,13 @@
+import { useResolvedPath } from 'react-router';
 import Swal from 'sweetalert2';
 import Constantes from '../Constantes'
 
-const Eliminardb = async (props) => {
+const Eliminardb = async (user) => {
    
         // muestra mensaje de confirmación antes de eliminar
-         const resultado = await Swal.fire({
+         const resultado =  await Swal.fire({
              title: 'Confirmación',
-             text: `¿Eliminar ${props.item.nombre}?`,
+             text: `¿Eliminar?`,
              icon: 'question',
              showCancelButton: true,
              confirmButtonColor: '#3298dc',
@@ -14,13 +15,19 @@ const Eliminardb = async (props) => {
              cancelButtonText: 'No',
              confirmButtonText: 'Sí, eliminar'
          });
+        
          if (!resultado.value) {
              return;
          }
          //
-         const respuesta = await fetch(`${Constantes.RUTA_API3}/${props.item._id}`, {
-             method: "DELETE",
-         });
+                                             
+        await fetch(`${Constantes.RUTA_API}/${user._id}`, {
+            method: "DELETE",
+            
+        });
+
+ 
+        
         
 }
 
