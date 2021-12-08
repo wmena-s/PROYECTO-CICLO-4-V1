@@ -1,7 +1,47 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+//configura libreria de autenticacion
+const passport =require('passport')
+const cookieParser = require('cookie-parser')
+const PassporLocal =require('passport-local').Strategy
+const session = require('express-session')
+app.use(express.urlencoded({extended: true}));
+app.use(cookieParser('clave secreta'))
+app.use(session({
+    secret: 'clave secreta',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+//se instala passport-local, aunque se puede ingresar por redes sociales
+passport.use(new PassporLocal(function (username, password, done){
+    if(username === "wilder" && password === "12345678") {
+        //name: "quienIngreso",}
+        return done(null, {id: 1, name: "wilder"});
+    }
+    done(null, false);
+}));
+
+//serializacion y desealizacion
+passport.serializeUser(function (user,done){
+    done(null, user.id);
+})
+//desealizacion
+passport.deserializeUser(function (id, done){
+    done(null, {id: 1, name: "wilder"});
+})
+//loguin
+app.post("/login", passport.authenticate({
+    successRedirect: "/",
+    failureRedirect: "/login"
+}))
+
+
+
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

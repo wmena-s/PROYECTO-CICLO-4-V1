@@ -14,7 +14,7 @@ import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';
 import { Foover } from './vistas/plantillas/Foover.jsx';
-
+import Login from '../src/vistas/login/login';
 
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
               <Route path='/equipos/ListaJugadores' element={<ListaJugadores/>} exacta />
               <Route path='/administrador/Dashboard' element={<Dashboard/>} exacta />
+                <Route path='/login' element={<Login/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
             </Routes>
