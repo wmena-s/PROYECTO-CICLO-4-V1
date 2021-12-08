@@ -8,12 +8,19 @@ import UsuarioE from './vistas/registros/UsuarioExterno';
 import InscribirJugadores from './vistas/usuario_externo/InscribirJugadores';
 import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
 import Home from './vistas/usuario_externo/Home.jsx';
-import Campeonatos from './vistas/usuario_externo/Capeonatos'
+import crearCampeonatos from './vistas/usuarioInterno/crearCampeonato'
+import Campeonatos from './vistas/usuarioInterno/Campeonatos'
+import GestionarCampeonatos from './vistas/usuarioInterno/GestionarCampeonatos'
+import equiposInscritos from './vistas/usuarioInterno/equiposInscritos'
+import solicitudesEquipo from './vistas/usuarioInterno/solicitudesEquipo'
+import Enfrentamientos from './vistas/usuarioInterno/Enfrentamientos'
 import Dashboard from './vistas/administrador/Dashboard'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';
+import HomeUI from './vistas/home/HomeUI';
 import { Abajo } from './vistas/plantillas/Abajo.jsx';
+
 
 
 
@@ -29,15 +36,23 @@ function App() {
               <Route path="/" element={<Inicio />}/>
               <Route path="/usuario_externo/equipos/inscrbir" element={<New />} />
               <Route path="/usuario_externo/RegisitroJugadores" element={<RegisitroJugadores />} />    
-              <Route path="/usuarioInterno" element={<UsuarioI />} />
+              <Route path="/usuarioInterno/registro" element={<UsuarioI />} />
               <Route path="/usuarioExterno" element={<UsuarioE />} />
               <Route path="/usuario_externo/equipos/InscribirJugadores" element={<InscribirJugadores/>} />
               <Route path="/equipos/registrados" element={<Home />} exacta />
+              <Route path="/usuarioInterno/campeonato/crearCampeonato" element={<crearCampeonatos />} exacta />
+              <Route path="/usuarioInterno/campeonato/gestionar" element={<GestionarCampeonatos />} exacta />
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
+              <Route path="/usuarioInterno/equiposInscritos" element={<equiposInscritos />} exacta />
+              <Route path="/usuarioInterno/enfrentamientos" element={<Enfrentamientos />} exacta />
+              <Route path="/usuarioInterno/solicitudesEquipo" element={<solicitudesEquipo />} exacta />
+              <Route path="/usuarioInterno" element={<HomeUI />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
               <Route path='/equipos/InscribirJugadores' element={<InscribirJugadores/>} exacta />
               <Route path='/administrador/Dashboard' element={<Dashboard/>} exacta />
+              
+              
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
             </Routes>

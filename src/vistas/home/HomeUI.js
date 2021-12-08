@@ -11,7 +11,7 @@ const HomeUE = () => {
             <div className="container">
              
                 <div className="colormodal">
-                    <h1>Registro UE</h1>
+                    <h1>Registro UI</h1>
                     <img  src='https://i.pinimg.com/originals/c7/91/3d/c7913d43b3677d55960c7f6f0cbe19ce.jpg' alt="baskets"></img>
                      <Modals/>
                 </div>
