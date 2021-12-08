@@ -33,8 +33,8 @@ passport.serializeUser(function (user,done){
 passport.deserializeUser(function (id, done){
     done(null, {id: 1, name: "wilder"});
 })
-//loguin
-app.post("/login", passport.authenticate({
+//login
+app.post("/login", passport.authenticate('local',{
     successRedirect: "/",
     failureRedirect: "/login"
 }))
