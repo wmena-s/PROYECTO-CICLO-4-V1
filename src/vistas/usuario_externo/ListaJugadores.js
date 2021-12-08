@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react"
 import Constantes from '../../Constantes'
-import Character from "./Character" 
-import './InscribirJugadores.css'
+import Character from "./Character"
+import './ListaJugadores.css'
 import Chart from '../../ChartV'
 
 //import BarChart from '../../BarChart';
@@ -11,7 +11,7 @@ import Chart from '../../ChartV'
           
 
 
-const InscribirJugadores = () => {
+const ListaJugadores = () => {
 
    /* useEffect( async ()=>{
         
@@ -34,8 +34,8 @@ const InscribirJugadores = () => {
         
         <>
         <div className="contenedor1 otro">
-            <h1 className="titulo1">--LISTA DE JUGADORES-- </h1>
-            <p >listados de jugadores inscritos en el equipo: ---------------xxxxxxxxxxx-------------------</p>
+            <h1 className="titulo1">LISTA DE JUGADORES</h1>
+            <p className="pp">listados de jugadores inscritos en el equipo: ---------------xxxxxxxxxxx-------------------</p>
             <div className="contenedorv1">
                 <Character caracteres={user}></Character>
                       {/**  <div>
@@ -91,4 +91,4 @@ const InscribirJugadores = () => {
     
 }
 
-export default InscribirJugadores
+export default ListaJugadores

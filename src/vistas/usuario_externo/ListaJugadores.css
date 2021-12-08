@@ -1,9 +1,16 @@
 .containerr{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
     grid-gap: 2px;
+
+}
+
+.contenedor1 {
     background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
-    
+}
+
+.pp{
+    color: white;
 }
 
 .containerr div{
@@ -76,6 +83,7 @@
 
 .contenedorv1 div div a:hover{
     background-color: deeppink;
+
 }
 
 .btn{
