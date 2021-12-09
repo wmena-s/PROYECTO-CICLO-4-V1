@@ -59,7 +59,7 @@ class Navegacion extends React.Component {
                          {/*} <Nav.Link as={NavLink} to="/usuarioInterno">UI registrar</Nav.Link>*/}
                          <Nav.Link as={NavLink} to="/home/homeUE">Usuario Externo</Nav.Link>
                         <NavDropdown title="Usuario Externo Opciones" id="navUsuarioExterno">
-                            
+                            <NavDropdown.Item href="/usuario_externo/RegisitroUE">Registro de Usuario</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/equipos/inscrbir">Registro de Equipos</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/RegisitroJugadores">Registrar Jugadores</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/equipos/ListaJugadores">Lista de Jugadores</NavDropdown.Item>
