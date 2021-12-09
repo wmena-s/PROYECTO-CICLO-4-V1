@@ -1,5 +1,5 @@
 import React from "react"
-import './inscribirJJ.css'
+import './ListaJugadores.css'
 import Swal from 'sweetalert2';
 import Constantes from '../../Constantes'
 import { ToastContainer, toast } from 'react-toastify';
@@ -37,28 +37,7 @@ const Character = ({caracteres=[]}) => {
                             className="btn btn-primary btn-danger btnEliminar" 
                             id="btnEliminar"
                             data-id="{item.id}"
-                            onClick={async ()=> {
-                               // muestra mensaje de confirmación antes de eliminar
-                                const resultado = await Swal.fire({
-                                    title: 'Confirmación',
-                                    text: `¿Eliminar ${item.nombre}?`,
-                                    icon: 'question',
-                                    showCancelButton: true,
-                                    confirmButtonColor: '#3298dc',
-                                    cancelButtonColor: '#f14668',
-                                    cancelButtonText: 'No',
-                                    confirmButtonText: 'Sí, eliminar'
-                                });
-                                if (!resultado.value) {
-                                    return;
-                                }
-                                //
-                                await fetch(`${Constantes.RUTA_API3}/${item._id}`, {
-                                    method: "DELETE",
-                                });
-                                }}
-                            
-
+                            onClick={()=>Eliminardb(item, Constantes.RUTA_API3) }
                         >eliminar</button>
                         </article>
                     </div>

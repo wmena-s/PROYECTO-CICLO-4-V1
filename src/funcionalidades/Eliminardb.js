@@ -2,7 +2,7 @@ import { useResolvedPath } from 'react-router';
 import Swal from 'sweetalert2';
 import Constantes from '../Constantes'
 
-const Eliminardb = async (user) => {
+const Eliminardb = async (user, number) => {
    
         // muestra mensaje de confirmación antes de eliminar
          const resultado =  await Swal.fire({
@@ -20,8 +20,8 @@ const Eliminardb = async (user) => {
              return;
          }
          //
-                                             
-        await fetch(`${Constantes.RUTA_API}/${user._id}`, {
+         alert(`${number}/${user._id}`)
+        await fetch(`${number}/${user._id}`, {
             method: "DELETE",
             
         });

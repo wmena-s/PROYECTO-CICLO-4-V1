@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import axios from "axios";
-import './Home.css'
+import './infoEquipo.css'
 import Swal from 'sweetalert2';
 import Eliminardb from "../../funcionalidades/Eliminardb.js";
 import Constantes from "../../Constantes";
 
-export default class Home extends Component{
+export default class InfoEquipo extends Component{
 
     state={
         users: [],
@@ -65,7 +65,7 @@ export default class Home extends Component{
                                             <p>Nombre: {user.nombre}</p> 
                                             <p>Fri. 27 November 2015</p>
                                             <button class="btn btn-primary">Editar</button>
-                                            <button class="btn btn-primary"  onClick= { () => Eliminardb(user)}>Eliminar</button>
+                                            <button class="btn btn-primary"  onClick= { () => Eliminardb(user, Constantes.RUTA_API)}>Eliminar</button>
                                             {/* permite seleccionar los jugadores que haran parte de un equipo, por medio de la cedula
                                             el sistema verificará si ese jugador ya tienen un equipo registrado
                                             el proceso actualiza el registro del equipo añadiendo 8 nuevos campos, 5 principales y 3 suplentes */}

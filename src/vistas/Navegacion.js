@@ -32,7 +32,7 @@ class Navegacion extends React.Component {
             /* forma sencilla de hacerlo sin usar react-boostrap 
             <nav className="nav">
                 <ul>
-                <Link to="/">Home</Link>
+                <Link to="/">InfoEquipo</Link>
                 </ul>
                 <ul>
                 <Link to="/usuarios">usurios</Link>
@@ -59,14 +59,14 @@ class Navegacion extends React.Component {
                          {/*} <Nav.Link as={NavLink} to="/usuarioInterno">UI registrar</Nav.Link>*/}
                          <Nav.Link as={NavLink} to="/home/homeUE">Usuario Externo</Nav.Link>
                         <NavDropdown title="Usuario Externo Opciones" id="navUsuarioExterno">
-                            <NavDropdown.Item href="/usuario_externo/equipos/InscribirJugadores">UE inscribir Jugadores</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuario_externo/equipos/ListaJugadores">UE inscribir Jugadores</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/equipos/inscrbir">UE inscribir E</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/RegisitroJugadores">Registrar</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/inscripciones">Inscripciones</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                         {/*<Nav.Link as={NavLink} to="/usuarioExterno">UE registrar</Nav.Link>*/}
-                        {/*<Nav.Link as={NavLink} to="/usuario_externo/equipos/InscribirJugadores">Inscribir Jugadores</Nav.Link>*/}
+                        {/*<Nav.Link as={NavLink} to="/usuario_externo/equipos/ListaJugadores">Inscribir Jugadores</Nav.Link>*/}
                     <Nav className="USUARIO INTERNO">
                         <NavDropdown title="usuario Interno" id="navUsuarioInterno">
                             <NavDropdown.Item href="/usuarioInterno/campeonato">campeonato</NavDropdown.Item>
