@@ -13,6 +13,7 @@ import Dashboard from './vistas/administrador/Dashboard'
 import UsuarioExterno from './vistas/usuario_externo/UsuariosExternosRegistrados'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomeUE from './vistas/home/HomeUE';
+import HomeUI from './vistas/home/HomeUI';
 import Registrar from './vistas/login-register-aa/registrar'
 import Inscripsiones from './vistas/login-register-aa/Inscripciones';
 import Login from './vistas/login-register-aa/login';
@@ -40,6 +41,8 @@ function App() {
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
+              <Route path='/home/homeUI' element={<HomeUI/>} exacta />
+
 
                 {/*aaron*/}
                 <Route path='/login' element={<Login/>} exacta />
