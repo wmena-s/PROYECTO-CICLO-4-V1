@@ -5,3 +5,4 @@ const Constantes = {
     RUTA_API4: 'http://localhost:5000/usuarioExterno',
 };
 export default Constantes;
+

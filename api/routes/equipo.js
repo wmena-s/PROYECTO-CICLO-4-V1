@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const CrearEquipo  = require('../modelos/modelo');
+const CrearEquipo  = require('../modelos/Equipos');
 
 
 

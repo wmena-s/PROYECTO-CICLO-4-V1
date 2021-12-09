@@ -1,6 +1,6 @@
 import React, {useState, Fragment} from 'react';
 
-const crearCampeonato = () => {
+const CrearCampeonato = () => {
 
     return ( 
         <Fragment>
@@ -53,4 +53,4 @@ const crearCampeonato = () => {
      );
 }
  
-export default crearCampeonato;
+export default CrearCampeonato;

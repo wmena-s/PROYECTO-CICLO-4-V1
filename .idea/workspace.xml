@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b88d6444-3b9b-4ef9-9229-05f3bb79c698" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/vistas/Inicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Inicio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/inicio.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/inicio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/modal/Modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/modal/Modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/modelos/modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/modelos/Equipos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/equipo.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/equipo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constantes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constantes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/usuarioInterno/crearCampeonato.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/usuarioInterno/CrearCampeonato.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,7 @@
       <workItem from="1638954090652" duration="5737000" />
       <workItem from="1639018919671" duration="3925000" />
       <workItem from="1639055310412" duration="340000" />
+      <workItem from="1639069255195" duration="4684000" />
     </task>
     <servers />
   </component>

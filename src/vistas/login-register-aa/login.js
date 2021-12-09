@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom'; 
 import Cookies from 'universal-cookie/es6';
 import axios from 'axios';
+import Constantes from '../../Constantes'
 
 const cookies = new Cookies();
 const baseUrl="http://localhost:3001/Profiles"
@@ -90,13 +91,9 @@ const Form = ({onSubmit}) => {
 const Login = () => {
     const handleSubmit = async(data) => {
         await axios.get(baseUrl, {params:{username: data.username, password: data.password}})
-        
-        
         .then(response=>{
           return response.data;
         })
-        
-        
         .then(response=>{
           if(response.length>0){
               var respuesta=response[0];
