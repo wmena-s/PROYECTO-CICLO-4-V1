@@ -142,7 +142,7 @@ const Form = ({onSubmit}) => {
 // Usage example:
 
 const Registrar = () => {
-    cosole.log(cooknies.get("username"))
+    console.log(cookies.get("username"))
     console.log(cookies.get("rol"))
     const handleSubmit = (data) => {
         console.log(data)

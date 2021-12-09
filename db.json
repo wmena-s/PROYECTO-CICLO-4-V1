@@ -88,22 +88,22 @@
   "torneos":[
     {
         "name": "test1",
-        "status":"A"
+        "estado":"A"
     },
     {
         "nameT": "test2",
-        "status":"C",
+        "estado":"C",
         "by":""
       }
     ,
     {
         "nameT": "test3",
-        "status":"I",
+        "estado":"I",
         "by":""
     },
     {
         "nameT": "test4",
-        "status":"A",
+        "estado":"A",
         "by":""
     }
 ]

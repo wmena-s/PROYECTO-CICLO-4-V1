@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState,useEffect } from "react";
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Row, Col } from "react-bootstrap";
 
 const baseInscripciones="http://localhost:3001/inscripciones";
 const baseTorneos="http://localhost:3001/torneos";
 
 const appStyle = {
+    margin:'auto',
     height: '500px',
     display: 'flex',
     padding: '5%'
@@ -90,24 +91,21 @@ export default function Inscripciones() {
         fetch(baseTorneos)
         .then(res=>res.json())
         .then(datos=>{
-            setInscripciones(datos)
+            setTorneos(datos)
         })
     },[])
 
     const listI= inscripciones;
     const listT=torneos;
-
+    console.log(torneos)
 
     return(
     <Container style={appStyle}>
+        <Row>
         <select id="torneos">
             {listT.map(item=>(
-                <option value="volvo"></option>
+                <option value={item.name}>{item.name}</option>
             ))}
-            <option value="volvo"></option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
         </select>
         <Table striped bordered hover>
         <thead>
@@ -130,11 +128,9 @@ export default function Inscripciones() {
                 </tr>
                 </>
             ))},
-
-
-
         </tbody>
         </Table>
+        </Row>
     </Container>
     )
 }
