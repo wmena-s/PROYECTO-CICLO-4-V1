@@ -52,7 +52,7 @@ const aceptadaStyle = {
     padding: '7px 10px',
     border: '1px solid #efffff',
     borderRadius: '3px',
-    background: 'green',
+    background: '#1F45FC',
     width: '100px', 
     fontSize: '15px',
     color: 'black',
@@ -83,8 +83,20 @@ export default function Inscripciones() {
             setTorneos(datos)
         })
     },[])
-
     const listT= torneos;
+    
+    const a = (i)=>{
+        if(i.status==="aceptada"){
+            aceptadaStyle.background="green"
+        }else{
+            if(i.status==="rechazada"){
+                aceptadaStyle.background="red"
+            }else{
+                aceptadaStyle.background="yellow"
+            }
+        }
+    }
+
     return(
     <Container style={appStyle}>
         <Table striped bordered hover>
@@ -97,18 +109,17 @@ export default function Inscripciones() {
         </thead>
         <tbody>
             {listT.map(item=>(
+                <>
                 <tr>
                 <td>{item.nameT}</td>
-    
                 <td>
-                        <button style={aceptadaStyle} type="submit">{item.status}</button>
+                    <button style={aceptadaStyle} type="submit">{item.status}</button>
                 </td>
-    
                 <td>
-    
                 </td>
                 </tr>
-            ))}
+                </>
+            ))},
 
 
 

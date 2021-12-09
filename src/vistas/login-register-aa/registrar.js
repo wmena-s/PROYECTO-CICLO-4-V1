@@ -57,70 +57,70 @@ const Tstyle ={
     color: 'black'
   };
 
-const Field = React.forwardRef(({label, type}, ref,accion) => {
+const Field = React.forwardRef(({label, type,name}, ref,accion) => {
     return (
       <div>
         <label style={labelStyle} >{label}</label>
-        <input ref={ref} type={type} style={inputStyle} onChange={accion}/>
+        <input ref={ref} type={type} style={inputStyle}/>
       </div>
     );
 });
 
 const Form = ({onSubmit}) => {
-    const [user, setUser] = useState({
-        username: "",
-        password: "",
-        email: "",
-        adress1: "",
-        adress2: "",
-        city: "",
-        state: "",
-        rol:"UE"
-    });
-    const handleChange = e=>{
-        setUser({ [e.target.name]: e.target.value });
-        console.log(e.target.value)
-    }
+    const usernameRef= React.useRef();
+    const emailRef= React.useRef();
+    const passwordRef= React.useRef();
+    const adress1Ref= React.useRef();
+    const adress2Ref= React.useRef();
+    const cityRef= React.useRef();
+    const stateRef= React.useRef();
     const handleSubmit = async(e) => {
         e.preventDefault();
-        await axios.post("http://localhost:3001/Profiles", user)
-        .then( res=>{
-            console.log(res)
-        })
+        const data = {
+            username: usernameRef.current.value,
+            email: emailRef.current.value,
+            password: passwordRef.current.value,
+            adress1: adress1Ref.current.value,
+            adress2: adress2Ref.current.value,
+            city: cityRef.current.value,
+            state: stateRef.current.value
+
+        };
+        onSubmit(data);
     };
     return (
     <form style={formStyle} onSubmit={handleSubmit} >
         <h1 style={Tstyle}> Registro </h1>
         <Row>
             <Col>
-            <Field label="Username:" type="text" accion={handleChange}/>
+            <Field label="Username:" type="text" ref={usernameRef}/>
             </Col>
             <Col>
-            <Field label="Email:" type="email" accion={handleChange}/>
+            <Field label="Email:" type="email"   ref={emailRef}/>
             </Col>
             <Col>
-            <Field label="Password:" type="password" accion={handleChange}/>
+            <Field label="Password:" type="password"  ref={passwordRef}/>
             </Col>
         </Row>
 
 
         <Row>
-        <Field label="Adress 1" type="text" accion={handleChange}/>
+        <Field label="Adress 1" type="text"  ref={adress1Ref}/>
         </Row>
 
 
 
         <Row>
-        <Field label="Adress 2" type="text" accion={handleChange}/>
+        <Field label="Adress 2" type="text"  ref={adress2Ref}/>
         </Row>
 
         <Row>
             <Col xs={7}>
-                <Field label="City:" type="text" accion={handleChange}/>
+                <Field label="City:" type="text"  ref={cityRef}/>
                 
             </Col>
             <Col xs={4}>
-            <Field label="State:" type="text" accion={handleChange}/>
+            <Field label="State:" type="text"  ref={stateRef}/>
             </Col>
         </Row>
         
@@ -144,22 +144,8 @@ const Form = ({onSubmit}) => {
 const Registrar = () => {
     console.log(cookies.get("username"))
     console.log(cookies.get("rol"))
-    const handleSubmit = async(data) => {
-        const user ={
-            username: "admin",
-            password: "123",
-            email:"example@gmail.com",
-            adress1:"",
-            adress2:"",
-            City:"",
-            state:"",
-            rol:"admin"
-        }
-        await axios.post('http://localhost:3001/Profiles',{user})
-        .then(response=>{
-            console.log(response)
-        })
-
+    const handleSubmit = (data) => {
+        console.log(data)
     };
     return (
       <div style={appStyle}>
