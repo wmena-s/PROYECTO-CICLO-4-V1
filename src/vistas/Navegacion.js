@@ -77,8 +77,8 @@ class Navegacion extends React.Component {
                             <NavDropdown.Item href="/usuarioInterno/campeonato/gestionar">Gestionar Campeonato</NavDropdown.Item>  
                             <NavDropdown.Item href="/usuarioInterno/campeonato">Campeonato</NavDropdown.Item>  
                             <NavDropdown.Item href="/usuarioInterno/equiposInscritos">Equipos Inscritos</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno/solicitudesEquipo">solicitudes de equipos</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno/enfrentamientos">solicitudes de equipos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/solicitudesEquipos">solicitudes de equipos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/enfrentamientos">Enfrentamientos</NavDropdown.Item>  
                         </NavDropdown>
                     </Nav>
                     <Nav className="USUARIO ADMINISTRADOR">
