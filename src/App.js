@@ -7,6 +7,7 @@ import UsuarioI from './vistas/registros/UsuarioInterno';
 import UsuarioE from './vistas/registros/UsuarioExterno';
 import ListaJugadores from './vistas/usuario_externo/ListaJugadores';
 import RegisitroJugadores from './vistas/registros/RegisitroJugadores';
+import UsuarioInterno from './vistas/registros/UsuarioInterno';
 import InfoEquipo from './vistas/usuario_externo/InfoEquipo.jsx';
 import Campeonatos from './vistas/usuario_externo/Capeonatos'
 import Dashboard from './vistas/administrador/Dashboard'
@@ -34,6 +35,7 @@ function App() {
             <Routes>  
               <Route path="/" element={<Inicio />}/>
               <Route path="/usuario_externo/equipos/inscrbir" element={<RegistroDeEquipos />} />
+              <Route path="/usuario_externo/RegisitroUE" element={<UsuarioInterno/>} />    
               <Route path="/usuario_externo/RegisitroJugadores" element={<RegisitroJugadores />} />    
               <Route path="/usuarioInterno" element={<UsuarioI />} />
               <Route path="/usuarioExterno" element={<UsuarioE />} />
