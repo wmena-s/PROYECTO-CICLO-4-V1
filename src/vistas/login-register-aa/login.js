@@ -1,0 +1,142 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom'; 
+import Cookies from 'universal-cookie/es6';
+import axios from 'axios';
+
+const cookies = new Cookies();
+const baseUrl="http://localhost:3001/Profiles"
+
+const appStyle = {
+    height: '500px',
+    display: 'flex',
+    padding: '5%'
+};
+
+
+
+const formStyle = {
+    margin: 'auto',
+    padding: '10px',
+    border: '1px solid #c9c9c9',
+    borderRadius: '5px',
+    background: '#f5f5f5',
+    width: '220px',
+    display: 'block'
+};
+
+const labelStyle = {
+    margin: '10px 0 5px 0',
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    fontSize: '15px',
+};
+
+const inputStyle = {
+    margin: '5px 0 10px 0',
+    padding: '5px', 
+    border: '1px solid #bfbfbf',
+    borderRadius: '3px',
+    boxSizing: 'border-box',
+    width: '100%'
+};
+
+const submitStyle = {
+    margin: '10px 0 0 0',
+    padding: '7px 10px',
+    border: '1px solid #efffff',
+    borderRadius: '3px',
+    background: '#3085d6',
+    width: '100%', 
+    fontSize: '15px',
+    color: 'white',
+    display: 'block'
+};
+
+const Field = React.forwardRef(({label, type}, ref) => {
+    return (
+      <div>
+        <label style={labelStyle} >{label}</label>
+        <input ref={ref} type={type} style={inputStyle} />
+      </div>
+    );
+});
+
+const Form = ({onSubmit}) => {
+    const usernameRef = React.useRef();
+    const passwordRef = React.useRef();
+    const handleSubmit = e => {
+        e.preventDefault();
+        const data = {
+            username: usernameRef.current.value,
+            password: passwordRef.current.value
+        };
+        onSubmit(data);
+    };
+    return (
+      <form style={formStyle} onSubmit={handleSubmit} >
+        <Field ref={usernameRef} label="Username:" type="text" />
+        <Field ref={passwordRef} label="Password:" type="password" />
+        <div>
+          <button style={submitStyle} type="submit">Submit</button>
+        </div>
+        <br/>
+        <Link to="/registrar"> Registrarme ahora </Link>
+      </form>
+    );
+};
+
+// Usage example:
+
+const Login = () => {
+    const handleSubmit = async(data) => {
+        await axios.get(baseUrl, {params:{username: data.username, password: data.password}})
+        
+        
+        .then(response=>{
+          return response.data;
+        })
+        
+        
+        .then(response=>{
+          if(response.length>0){
+              var respuesta=response[0];
+              cookies.set('username', respuesta.username, {path: "/"});
+              cookies.set('password', respuesta.password, {path: "/"});
+              cookies.set('rol', respuesta.rol, {path: "/"});
+              alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`);
+              window.location.href="/registrar";
+          }else{
+              alert('El usuario o la contraseña no son correctos');
+          }
+      })
+
+
+    };
+    return (
+      <div style={appStyle}>
+        <Form onSubmit={handleSubmit} />
+      </div>
+    );
+};
+
+export default Login;
+
+
+
+/*
+const json = JSON.stringify(data, null, 4);
+        console.clear();
+        console.log(json);
+        let log= false
+        Profiles.map((dat)=>{
+          if (dat.username===data.username & dat.password===data.password){
+              window.location.href='/'
+              log=true
+              cookies.set('username',dat.username, {path:"/"})
+              cookies.set('password',dat.password, {path:"/"})
+              cookies.set('rol',dat.rol, {path:"/"})
+              
+          }
+        })
+        !log ? alert("usuario o contraseña invalida") : console.log("Logueado");
+*/

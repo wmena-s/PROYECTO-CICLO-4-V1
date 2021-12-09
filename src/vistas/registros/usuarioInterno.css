@@ -1,0 +1,36 @@
+.contenedor-formulario{
+    background-color: antiquewhite;
+    padding: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2%;
+}
+
+.contenedor-formulario div img {
+    align-content: center;
+}
+
+.form{
+    margin: 12px;
+    align-content: center;
+}
+
+.formularioV1{
+    margin: 39px;
+    padding: 0px 50px;
+}
+
+/*usado en New para dividir las columnas de registro de usuario y visualizar equipo registrado*/
+.columnas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.thumbnail2{
+    justify-content: center;
+    color: black;
+    padding: 2px;
+    background-color: aqua;
+}

@@ -1,0 +1,21 @@
+{
+    "inscripciones":[
+        {
+            "nameT": "test1",
+            "status":"aceptada"
+        },
+        {
+            "nameT": "test2",
+            "status":"rechazada"
+        }
+        ,
+        {
+            "nameT": "test3",
+            "status":"pendiente"
+        },
+        {
+            "nameT": "test4",
+            "status":"aceptada"
+        }
+    ]
+}

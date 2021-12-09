@@ -1,0 +1,84 @@
+{
+  "Profiles":[ 
+    {
+      "username": "admin",
+      "password": "123",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"admin"
+
+    },
+    {
+      "username": "aaron",
+      "password": "123456",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"UE"
+    },
+    {
+      "username": "test",
+      "password": "asjgdhasd",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"UI"
+    },
+    {
+      "username": "test2",
+      "password": "aonisfocibhnaio",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"admin"
+    },
+    {
+      "username": "test3",
+      "password": "asdiohbasuiudbon",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"UI"
+    },
+    {
+      "username": "test4",
+      "password": "esto es una prueba",
+      "email":"example@gmail.com",
+      "adress1":"",
+      "adress2":"",
+      "City":"",
+      "state":"",
+      "rol":"UI"
+    }
+  ],
+  "inscripciones":[
+    {
+        "nameT": "test1",
+        "status":"aceptada"
+    },
+    {
+        "nameT": "test2",
+        "status":"rechazada"
+    }
+    ,
+    {
+        "nameT": "test3",
+        "status":"pendiente"
+    },
+    {
+        "nameT": "test4",
+        "status":"aceptada"
+    }
+]
+  }

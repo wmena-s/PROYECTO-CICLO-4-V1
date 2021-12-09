@@ -1,0 +1,13 @@
+.nav{
+    display: flex;
+    margin: 12px;
+}
+
+.nav li {
+    margin: 14px;
+    border-radius: 12px;
+    background-color: bisque;
+    padding: 2px;
+}
+
+

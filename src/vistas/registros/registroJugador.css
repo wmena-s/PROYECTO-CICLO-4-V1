@@ -1,0 +1,23 @@
+.contanedorgeneral{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.contanedorgeneral div{
+    padding: 1rem;
+}
+
+.contanedorgeneral div .form-group{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 2%;
+    color: black;
+    justify-items: center;
+}
+
+.App-header{
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+}

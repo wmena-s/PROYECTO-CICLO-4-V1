@@ -1,0 +1,55 @@
+.containerr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.containerr div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+ 
+}
+
+.containerr div div{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 300px;
+    height: 150px;
+}
+
+.img-clase{
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.containerr div div li:nth-child(2n){
+    background-color: gainsboro;   
+}
+
+.containerr div div li:nth-child(2n+1){
+    background-color: blue;
+}
+.containerr{
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+
+}
+
+.containerr div:hover{
+    background-color: red;
+}
+
+.contenedorv1 div div li:hover{
+    background-color: deeppink;
+}
+
+.btn{
+    height: 2rem;
+}
+
+.containerr div div p{
+    padding: 1rem;
+    color: white;
+    font-size: 20px;
+}
