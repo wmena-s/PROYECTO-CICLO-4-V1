@@ -47,6 +47,9 @@ class Navegacion extends React.Component {
                 <Navbar.Toggle aria-controls="responsive"/>
                 <Navbar.Collapse id="responsive">
                     <Nav ClassName='mr-auto'>
+                        <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+                    </Nav>
+                    <Nav ClassName='mr-auto'>
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link> 
                         {/*<Nav.Link as={NavLink} to="/equipos/registrados">UE registrados</Nav.Link>*/} 
                     </Nav>
@@ -59,6 +62,7 @@ class Navegacion extends React.Component {
                             <NavDropdown.Item href="/usuario_externo/equipos/InscribirJugadores">UE inscribir Jugadores</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/equipos/inscrbir">UE inscribir E</NavDropdown.Item>
                             <NavDropdown.Item href="/usuario_externo/RegisitroJugadores">Registrar</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuario_externo/inscripciones">Inscripciones</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                         {/*<Nav.Link as={NavLink} to="/usuarioExterno">UE registrar</Nav.Link>*/}
@@ -78,6 +82,7 @@ class Navegacion extends React.Component {
                     <Nav>
                         <Nav.Link as={NavLink} to="/" ><abbr title ="Dar clic si desea salir de la aplicaion.">Salir</abbr> </Nav.Link>
                     </Nav>
+
                 </Navbar.Collapse>
 
            
