@@ -70,14 +70,14 @@ class Navegacion extends React.Component {
                         {/*<Nav.Link as={NavLink} to="/usuario_externo/equipos/ListaJugadores">Inscribir Jugadores</Nav.Link>*/}
                     <Nav className="USUARIO INTERNO">
                         <NavDropdown title="usuario Interno" id="navUsuarioInterno">
-                                <NavDropdown.Item href="/usuarioInterno/campeonato/crearCampeonato">campeonato</NavDropdown.Item>
-                                <NavDropdown.Item href="/usuarioInterno/registro">UI registrar</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno">UI</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno/campeonato/gestionar">Gestionar Campeonato</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno/campeonato">Campeonato</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno/equiposInscritos">Equipos Inscritos</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno/solicitudesEquipo">solicitudes de equipos</NavDropdown.Item>  
-                                <NavDropdown.Item href="/usuarioInterno/enfrentamientos">solicitudes de equipos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/campeonato/crearCampeonato">campeonato</NavDropdown.Item>
+                            <NavDropdown.Item href="/usuarioInterno/registro">UI registrar</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno">UI</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/campeonato/gestionar">Gestionar Campeonato</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/campeonato">Campeonato</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/equiposInscritos">Equipos Inscritos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/solicitudesEquipo">solicitudes de equipos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/enfrentamientos">solicitudes de equipos</NavDropdown.Item>  
                         </NavDropdown>
                     </Nav>
                     <Nav className="USUARIO ADMINISTRADOR">
