@@ -120,23 +120,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-/*
-const json = JSON.stringify(data, null, 4);
-        console.clear();
-        console.log(json);
-        let log= false
-        Profiles.map((dat)=>{
-          if (dat.username===data.username & dat.password===data.password){
-              window.location.href='/'
-              log=true
-              cookies.set('username',dat.username, {path:"/"})
-              cookies.set('password',dat.password, {path:"/"})
-              cookies.set('rol',dat.rol, {path:"/"})
-              
-          }
-        })
-        !log ? alert("usuario o contraseña invalida") : console.log("Logueado");
-*/
