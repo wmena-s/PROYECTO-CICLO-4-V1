@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b88d6444-3b9b-4ef9-9229-05f3bb79c698" name="Changes" comment="" />
+    <list default="true" id="b88d6444-3b9b-4ef9-9229-05f3bb79c698" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/vistas/Inicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Inicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/inicio.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/inicio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/modal/Modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/modal/Modals.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +73,7 @@
       <workItem from="1638939897724" duration="9456000" />
       <workItem from="1638954090652" duration="5737000" />
       <workItem from="1639018919671" duration="3925000" />
+      <workItem from="1639055310412" duration="340000" />
     </task>
     <servers />
   </component>

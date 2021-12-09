@@ -9,6 +9,7 @@ import ListaJugadores from '../usuario_externo/ListaJugadores';
 import Politica from '../../vistas/plantillas/Politica'
 import PoliticasDos from '../../vistas/plantillas/PoliticasDos'
 import Inscripciones from '../../vistas/login-register-aa/Inscripciones'
+
 import { controllers } from 'chart.js';
 
 export const Modals = () => {

@@ -18,6 +18,7 @@ import Inscripsiones from './vistas/login-register-aa/Inscripciones';
 import Login from './vistas/login-register-aa/login';
 import { Foover } from './vistas/plantillas/Foover.jsx';
 import Logins from '../src/vistas/login/login';
+import HomeA from './vistas/administrador/HomeA';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
               <Route path="/usuarioInterno/campeonato" element={<Campeonatos />} exacta />
               <Route path="/usuario_externo/UsuariosRegistrados" element={<UsuarioExterno />} exacta />
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
+
                 {/*aaron*/}
                 <Route path='/login' element={<Login/>} exacta />
                 <Route path='/registrar' element={<Registrar/>} exacta />
@@ -46,9 +48,11 @@ function App() {
                 {/*aaron*/}
               <Route path='/equipos/ListaJugadores' element={<ListaJugadores/>} exacta />
               <Route path='/administrador/Dashboard' element={<Dashboard/>} exacta />
+              <Route path='/adminsitrador/homeA' element={<HomeA/>} exacta />
                 <Route path='/login' element={<Logins/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
+
             </Routes>
 
             <Foover></Foover>

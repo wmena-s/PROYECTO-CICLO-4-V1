@@ -12,3 +12,12 @@
     border-color: black;
 }
 
+.loginP{
+}
+
+.contenedorI{
+  display: grid;
+  grid-template-columns:  1fr 3fr;
+  
+}
+

@@ -81,6 +81,7 @@ class Navegacion extends React.Component {
                         </NavDropdown>
                     </Nav>
                     <Nav className="USUARIO ADMINISTRADOR">
+                        <Nav.Link  href="/adminsitrador/homeA">Administrador</Nav.Link>
                         <NavDropdown title="usuario Administrador" id="navUsuarioAdministrador">
                             <NavDropdown.Item href="/usuario_externo/UsuariosRegistrados">usuario Registrados</NavDropdown.Item>
                             <NavDropdown.Item href="/administrador/Dashboard">Dashboard</NavDropdown.Item>
