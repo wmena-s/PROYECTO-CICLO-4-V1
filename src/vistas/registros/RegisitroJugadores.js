@@ -44,10 +44,10 @@ class RegisitroJugadores extends React.Component {
                             <label className="label" htmlFor="edad">edad:</label>
                             <input className="form-control" placeholder="edad" id="edad"  name="edad" onChange={this.manejarCambio} value={this.state.jugador.edad} ></input>
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label className="label" htmlFor="campeonato">campeonato:</label>
                             <input className="form-control" placeholder="campeonato" id="campeonato" name="campeonato" onChange={this.manejarCambio} value={this.state.jugador.campeonato} ></input>
-                        </div>
+                        </div> */}
                         <div className="form-group">
                             <label className="label" htmlFor="equipo">equipo:</label>
                             <input className="form-control" placeholder="equipo" id="equipo" name="equipo" onChange={this.manejarCambio} value={this.state.jugador.equipo} ></input>

@@ -2,6 +2,19 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 
+
+
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var jugadorRouter = require('./routes/equipo');
+var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
+var usuarioExterno = require('./routes/usuariosExterno');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
+var jugadores = require('./routes/jugadores');
+
+var app = express();
+
+
 //configura libreria de autenticacion
 const passport =require('passport')
 const cookieParser = require('cookie-parser')
@@ -38,19 +51,9 @@ app.post("/login", passport.authenticate({
     successRedirect: "/",
     failureRedirect: "/login"
 }))
+//configura libreria de autenticacion
 
 
-
-
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var jugadorRouter = require('./routes/equipo');
-var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
-var usuarioExterno = require('./routes/usuariosExterno');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
-var jugadores = require('./routes/jugadores');
-
-var app = express();
 // inicio: permite hacer llamados de react desde otro direccion (5000) a la 3000 de la api
 app.use((req, res, next)=>{
     res.set("Access-Control-Allow-Credentials", "true");

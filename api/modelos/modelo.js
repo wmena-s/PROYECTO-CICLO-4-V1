@@ -14,11 +14,11 @@ const CrearEquipo = mongoose.model('Equipos', {
     },
     campeonato: {
         type: String,
-        required: true,
+        default: "",
     },
     nombreEquipo: {
         type: String,
-        required: true,
+        default: "",
     },
 });
 

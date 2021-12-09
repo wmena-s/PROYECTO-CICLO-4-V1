@@ -8,6 +8,7 @@ import './Modal.css'
 import ListaJugadores from '../usuario_externo/ListaJugadores';
 import Politica from '../../vistas/plantillas/Politica'
 import PoliticasDos from '../../vistas/plantillas/PoliticasDos'
+import Inscripciones from '../../vistas/login-register-aa/Inscripciones'
 import { controllers } from 'chart.js';
 
 export const Modals = () => {
@@ -38,6 +39,23 @@ export const Modaless = () => {
             <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
     
                 <UsuarioInterno2></UsuarioInterno2>
+            </Modal>
+        </div>
+        </>
+    )
+
+}
+
+export const ModalesD = () => {
+    const [isOpenModa20, openModa20, closeModa20]=useModal(false);
+    return (
+        <>
+
+        <div>
+            <button onClick={openModa20} className="btn-primary boton1">INGRESAR</button>
+            <Modal isOpen={isOpenModa20} closeModal={closeModa20}>
+    
+                <Inscripciones></Inscripciones>
             </Modal>
         </div>
         </>

@@ -30,9 +30,9 @@ class RegistroDeEquipos extends React.Component {
                   REGISTRO DE EQUIPOS
                 </h1>
                 
-                <div className="columnas">
+                <div className="columnas2">
                 
-                    <div className="container formulario">
+                    <div className="formularioRE">
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
                         <div className="row">
                         <div className="col-6">
@@ -47,10 +47,10 @@ class RegistroDeEquipos extends React.Component {
                             <label className="label" htmlFor="correo">Correo:</label>
                             <input className="form-control" type="email" placeholder="Correo" id="correo"  name="correo" onChange={this.manejarCambio} value={this.state.equipo.correo} ></input>
                         </div>
-                        <div className="col-6">
+                        {/* <div className="col-6">
                             <label className="label" htmlFor="campeonato">campeonato:</label>
                             <input className="form-control" type="text" placeholder="campeonato" id="campeonato" name="campeonato" onChange={this.manejarCambio} value={this.state.equipo.campeonato} ></input>
-                        </div>
+                        </div> */}
                         <div className="col-6">
                             <label className="label" htmlFor="nombreEquipo">nombre de equipo:</label> 
                             <input className="form-control" type="text" placeholder="nombreEquipo" id="nombreEquipo"  name="nombreEquipo" onChange={this.manejarCambio} value={this.state.equipo.nombreEquipo} ></input>

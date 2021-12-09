@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import './Nav.css'
 import './inicio.css'
 import {UsuarioExternos} from '../vistas/modal/Modals'
+import {login} from '../vistas/login-register-aa/login'
 
 const Inicio = () => {
     return (
         <div>
+          <login></login>
             <Carousel>
   <Carousel.Item>
     <img
