@@ -79,17 +79,36 @@ export default function Inscripciones() {
     const [torneos,setTorneos]=useState([])
 
     useEffect(()=>{
-        fetch(baseURL)
+        fetch(baseInscripciones)
         .then(res=>res.json())
         .then(datos=>{
             setInscripciones(datos)
         })
     },[])
-    const listT= torneos;
+
+    useEffect(()=>{
+        fetch(baseTorneos)
+        .then(res=>res.json())
+        .then(datos=>{
+            setInscripciones(datos)
+        })
+    },[])
+
+    const listI= inscripciones;
+    const listT=torneos;
 
 
     return(
     <Container style={appStyle}>
+        <select id="torneos">
+            {listT.map(item=>(
+                <option value="volvo"></option>
+            ))}
+            <option value="volvo"></option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
         <Table striped bordered hover>
         <thead>
             <tr>
@@ -99,7 +118,7 @@ export default function Inscripciones() {
             </tr>
         </thead>
         <tbody>
-            {listT.map(item=>(
+            {listI.map(item=>(
                 <>
                 <tr>
                 <td>{item.nameT}</td>
