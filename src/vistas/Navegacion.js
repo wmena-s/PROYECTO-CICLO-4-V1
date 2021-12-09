@@ -71,14 +71,13 @@ class Navegacion extends React.Component {
                     <Nav className="USUARIO INTERNO">
                         <Nav.Link as={NavLink} to="/home/homeUI">Usuario Interno</Nav.Link>
                         <NavDropdown title="usuario Interno" id="navUsuarioInterno">
-                            <NavDropdown.Item href="/usuarioInterno/campeonato/crearCampeonato">campeonato</NavDropdown.Item>
-                            <NavDropdown.Item href="/usuarioInterno/registro">UI registrar</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno">UI</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno/campeonato/gestionar">Gestionar Campeonato</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno/campeonato">Campeonato</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/registro">Registro UI</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/CrearCampeonato">Crear Campeonato</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/SeleccionarCampeonato">Seleccionar Campeonato</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/GestionarCampeonato">Gestionar Campeonato</NavDropdown.Item>  
                             <NavDropdown.Item href="/usuarioInterno/equiposInscritos">Equipos Inscritos</NavDropdown.Item>  
                             <NavDropdown.Item href="/usuarioInterno/solicitudesEquipos">solicitudes de equipos</NavDropdown.Item>  
-                            <NavDropdown.Item href="/usuarioInterno/enfrentamientos">Enfrentamientos</NavDropdown.Item>  
+                            <NavDropdown.Item href="/usuarioInterno/ListadoPartidos">Listado Partidos</NavDropdown.Item>    
                         </NavDropdown>
                     </Nav>
                     <Nav className="USUARIO ADMINISTRADOR">

@@ -1,0 +1,96 @@
+.containerr{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    grid-gap: 2px;
+
+}
+
+.contenedor1 {
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+}
+
+.pp{
+    color: white;
+}
+
+.containerr div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1fr;
+    height: 1fr;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2%;
+}
+
+.containerr div div{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 50%;
+    row-gap: 1rem;
+    column-gap: 3rem; 
+}
+
+.containerr div div div{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.containerr div article button{
+    width: 50%;
+    height: 100%;
+}
+
+.containerr div img{
+    position: relative;
+}
+
+.containerr div article{
+    grid-column: 1/3;
+}
+
+.img-clase{
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.containerr div div div:nth-child(2n){
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+
+.containerr div div a{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.containerr div div a:nth-child(2n){
+    background-color: gainsboro;   
+}
+
+.containerr div div a:nth-child(2n+1){
+    background-color: blue;
+}
+
+.containerr div:hover{
+    background-color: red;
+}
+
+.contenedorv1 div div a:hover{
+    background-color: deeppink;
+
+}
+
+.btn{
+    height: 2rem;
+}
+
+.containerr div div p{
+    color: white;
+    font-size: 20px;
+}

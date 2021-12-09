@@ -5,9 +5,9 @@ const crearCampeonato = () => {
     return ( 
         <Fragment>
         
-                <h1>
+                <h2>
                   CAMPEONATO NUEVO
-                </h1>
+                </h2>
                 <div className="contanedorgeneral">
                      <div className="row">
                     <form className="field">
