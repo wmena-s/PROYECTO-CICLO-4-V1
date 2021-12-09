@@ -12,6 +12,9 @@
     "chart.js": "^3.6.2",
     "cookie-parser": "^1.4.6",
     "express-session": "^1.17.2",
+    "json-server": "^0.17.0",
+    "md5": "^2.3.0",
+    "mongoose-timestamp": "^0.6.0",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0",
     "prop-types": "^15.7.2",
@@ -25,10 +28,8 @@
     "react-toastify": "^8.1.0",
     "sass": "^1.44.0",
     "sweetalert2": "^11.3.0",
-    "web-vitals": "^2.1.2",
     "universal-cookie": "^4.0.4",
-    "json-server": "^0.17.0",
-    "md5": "^2.3.0"
+    "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

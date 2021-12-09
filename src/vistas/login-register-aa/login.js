@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom'; 
 import Cookies from 'universal-cookie/es6';
 import axios from 'axios';
-import Constantes from '../../Constantes'
 
 const cookies = new Cookies();
 const baseUrl="http://localhost:3001/Profiles"
@@ -96,7 +94,7 @@ const Login = () => {
         })
         .then(response=>{
           if(response.length>0){
-              var respuesta=response[0];
+              let respuesta=response[0];
               cookies.set('username', respuesta.username, {path: "/"});
               cookies.set('password', respuesta.password, {path: "/"});
               cookies.set('rol', respuesta.rol, {path: "/"});
