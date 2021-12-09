@@ -74,8 +74,20 @@ const cancelarStyle = {
 };
 
 
-export default function Inscripciones() {
+const submitStyle = {
+    margin: '10px 0 0 0',
+    padding: '7px 10px',
+    border: '1px solid #efffff',
+    borderRadius: '3px',
+    background: '#3085d6',
+    width: '100%', 
+    fontSize: '15px',
+    color: 'white',
+    display: 'block'
+};
 
+export default function Inscripciones() {
+    const TaddRef = React.useRef();
     const [inscripciones,setInscripciones]=useState([])
     const [torneos,setTorneos]=useState([])
 
@@ -95,6 +107,10 @@ export default function Inscripciones() {
         })
     },[])
 
+    const add= ()=>{
+        console.log(TaddRef.current.value)
+    }
+
     const listI= inscripciones;
     const listT=torneos;
     console.log(torneos)
@@ -102,11 +118,13 @@ export default function Inscripciones() {
     return(
     <Container style={appStyle}>
         <Row>
-        <select id="torneos">
+        <select ref={TaddRef} id="torneos">
             {listT.map(item=>(
-                <option value={item.name}>{item.name}</option>
+                <option value={item.nameT}>{item.nameT}</option>
             ))}
         </select>
+        <button style={submitStyle} onClick={add}>agregar</button>
+        <br></br>
         <Table striped bordered hover>
         <thead>
             <tr>

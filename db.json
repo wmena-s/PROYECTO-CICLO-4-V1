@@ -87,7 +87,7 @@
   ],
   "torneos":[
     {
-        "name": "test1",
+        "nameT": "test1",
         "estado":"A"
     },
     {

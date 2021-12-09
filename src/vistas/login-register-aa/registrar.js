@@ -6,6 +6,7 @@ import Cookies from 'universal-cookie/es6';
 import axios from 'axios';
 
 const cookies= new Cookies
+const baseURL = "http://localhost:3001/Profiles"
 
 
 
@@ -145,7 +146,11 @@ const Registrar = () => {
     console.log(cookies.get("username"))
     console.log(cookies.get("rol"))
     const handleSubmit = (data) => {
-        console.log(data)
+        console.log("registrado");
+        console.log(data);
+        <div style={appStyle}>
+        <Form onSubmit={handleSubmit} />
+        </div>
     };
     return (
       <div style={appStyle}>
