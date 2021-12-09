@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState,useEffect } from "react";
 import { Container, Table } from "react-bootstrap";
 
-const baseURL="http://localhost:3001/inscripciones";
+const baseInscripciones="http://localhost:3001/inscripciones";
+const baseTorneos="http://localhost:3001/torneos";
 
 const appStyle = {
     height: '500px',
@@ -74,28 +75,18 @@ const cancelarStyle = {
 
 export default function Inscripciones() {
 
+    const [inscripciones,setInscripciones]=useState([])
     const [torneos,setTorneos]=useState([])
 
     useEffect(()=>{
-        fetch(baseURL,{params:{status:"aceptada"}})
+        fetch(baseURL)
         .then(res=>res.json())
         .then(datos=>{
-            setTorneos(datos)
+            setInscripciones(datos)
         })
     },[])
     const listT= torneos;
-    
-    const a = (i)=>{
-        if(i.status==="aceptada"){
-            aceptadaStyle.background="green"
-        }else{
-            if(i.status==="rechazada"){
-                aceptadaStyle.background="red"
-            }else{
-                aceptadaStyle.background="yellow"
-            }
-        }
-    }
+
 
     return(
     <Container style={appStyle}>

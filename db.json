@@ -63,22 +63,48 @@
     }
   ],
   "inscripciones":[
+      {
+          "nameT": "test1",
+          "status":"aceptada",
+          "by":""
+      },
+      {
+          "nameT": "test2",
+          "status":"rechazada",
+          "by":""
+        }
+      ,
+      {
+          "nameT": "test3",
+          "status":"pendiente",
+          "by":""
+      },
+      {
+          "nameT": "test4",
+          "status":"aceptada",
+          "by":""
+      }
+  ],
+  "torneos":[
     {
-        "nameT": "test1",
-        "status":"aceptada"
+        "name": "test1",
+        "status":"A"
     },
     {
         "nameT": "test2",
-        "status":"rechazada"
-    }
+        "status":"C",
+        "by":""
+      }
     ,
     {
         "nameT": "test3",
-        "status":"pendiente"
+        "status":"I",
+        "by":""
     },
     {
         "nameT": "test4",
-        "status":"aceptada"
+        "status":"A",
+        "by":""
     }
 ]
   }
