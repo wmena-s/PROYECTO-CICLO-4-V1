@@ -11,7 +11,7 @@ function GestionarCampeonato() {
             <div className="container-xl justify-content-center align-content-center mx-auto mb-5">
                 <div className="row">
                     <div className="col">
-                        <img src="../public/Torneo.png" alt="Torneo" />
+                        <img src="http://assets.stickpng.com/thumbs/5856a4a84f6ae202fedf275f.png" alt="Torneo" />
                         <input type="file" className=""></input>
                     </div>
                     
@@ -25,6 +25,7 @@ function GestionarCampeonato() {
                             <li><span className="fw-bold">Inicia:</span> dd/mm/yy</li>
                             <li><span className="fw-bold">Finaliza:</span> dd/mm/yy</li>
                         </ul>
+                        <button className="btn-success">Editar</button>
                     </div>
                     <div className="col">
                         <div className="">

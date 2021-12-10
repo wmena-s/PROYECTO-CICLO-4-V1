@@ -27,7 +27,7 @@ const HomeUE = () => {
                 </div>
                 <div className="colormodal">
                     <h1>Estadísticas</h1>
-                    <img src='https://pre00.deviantart.net/a8d8/th/pre/i/2016/345/2/4/james_harden_by_irockmedia-dar8t3p.jpg ' alt="animals"></img>
+                    <img src='http://assets.stickpng.com/images/585d35c6cb11b227491c3348.png' alt="animals"></img>
                      <ModalRegistrar2></ModalRegistrar2>
                 </div>
 
