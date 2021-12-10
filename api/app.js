@@ -1,10 +1,12 @@
 var express = require('express');
 var path = require('path');
-let logger = require('morgan');
+var logger = require('morgan');
 
 
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
+
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 var jugadorRouter = require('./routes/equipo');
 var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
 var usuarioExterno = require('./routes/usuariosExterno');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
