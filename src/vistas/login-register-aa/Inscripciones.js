@@ -108,6 +108,7 @@ export default function Inscripciones() {
     },[])
 
     const add= ()=>{
+        console.log("Agregado")
         console.log(TaddRef.current.value)
     }
 
