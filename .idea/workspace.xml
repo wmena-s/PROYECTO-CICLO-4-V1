@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b88d6444-3b9b-4ef9-9229-05f3bb79c698" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/api/modelos/jugador.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/api/modelos/jugador.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/jugadores.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/jugadores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/usuario_externo/ListaJugadores.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/usuario_externo/ListaJugadores.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/api/modelos/modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/modelos/Equipos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/equipo.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/equipo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constantes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constantes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/usuarioInterno/crearCampeonato.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/usuarioInterno/CrearCampeonato.js" afterDir="false" />
+>>>>>>> parent of 939bd37 (prueba autenticacion)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +57,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="16.8.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="16.11.12" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -77,8 +83,12 @@
       <workItem from="1638954090652" duration="5737000" />
       <workItem from="1639018919671" duration="3925000" />
       <workItem from="1639055310412" duration="340000" />
+<<<<<<< HEAD
       <workItem from="1639069255195" duration="15262000" />
       <workItem from="1639103250485" duration="592000" />
+=======
+      <workItem from="1639069255195" duration="4684000" />
+>>>>>>> parent of 939bd37 (prueba autenticacion)
     </task>
     <servers />
   </component>
