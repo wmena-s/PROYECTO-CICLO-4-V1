@@ -5,10 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/api/modelos/jugador.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/api/modelos/jugador.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/jugadores.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/jugadores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/usuario_externo/ListaJugadores.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/usuario_externo/ListaJugadores.js" afterDir="false" />
 =======
+=======
+>>>>>>> parent of 939bd37 (prueba autenticacion)
 =======
 >>>>>>> parent of 939bd37 (prueba autenticacion)
       <change beforePath="$PROJECT_DIR$/api/modelos/modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/modelos/Equipos.js" afterDir="false" />
@@ -17,6 +20,9 @@
       <change beforePath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/login-register-aa/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/usuarioInterno/crearCampeonato.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/usuarioInterno/CrearCampeonato.js" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 939bd37 (prueba autenticacion)
+=======
 >>>>>>> parent of 939bd37 (prueba autenticacion)
 =======
 >>>>>>> parent of 939bd37 (prueba autenticacion)
@@ -91,8 +97,12 @@
       <workItem from="1639055310412" duration="340000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1639069255195" duration="15262000" />
       <workItem from="1639103250485" duration="592000" />
+=======
+      <workItem from="1639069255195" duration="4684000" />
+>>>>>>> parent of 939bd37 (prueba autenticacion)
 =======
       <workItem from="1639069255195" duration="4684000" />
 >>>>>>> parent of 939bd37 (prueba autenticacion)

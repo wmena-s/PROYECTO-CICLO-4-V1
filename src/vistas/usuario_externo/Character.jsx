@@ -8,9 +8,6 @@ import Eliminardb from '../../funcionalidades/Eliminardb' //no se ha usado queda
 
 const Character = ({caracteres=[]}) => {
    // console.log(caracteres)
-
- 
-
     return (
        
         <div className="containerr">

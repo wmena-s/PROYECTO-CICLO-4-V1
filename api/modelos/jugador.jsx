@@ -7,19 +7,22 @@ const jugador = mongoose.model('jugadores', {
     cedula: {
         type: Number,
         required: true,
-        min: [3, 'Too few eggs'],
         unique: true,
-        max: 8,
     },
     edad: {
         type: String,
         required: true,
     },
-    equipo: [{
-        type: mongoose.Types.ObjectId,
-        ref: 'CrearEquipo',
-        required: false
-    }],
+    equipo: 
+    // [{
+    //     type: mongoose.Types.ObjectId,
+    //     ref: 'CrearEquipo',
+    //     required: false
+    // }]
+    {
+        type: String,
+        default: "",
+    },
     campeonato: {
         type: String,
         default: "",
