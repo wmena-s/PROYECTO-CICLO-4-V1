@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+}
+
+.colormodal{
+    opacity: 1;
+    margin: 1rem 1rem;
+    border-radius: 3rem;
+}
+
+.colormodal:hover {
+  color: #f2f2f2;
+  box-shadow: 20px 50px 100px rgba(50, 170, 235, 0.5);
+}
+
+.colormodal:hover,
+.colormodal:hover~.bg {
+  opacity: 1;
+  background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+  background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
+  background: linear-gradient(135deg, #d877dd 15%,#077cd6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+}
+
+.divv{
+    background: -webkit-linear-gradient(-45deg,black 15%,blue  100%);
+}

@@ -42,8 +42,8 @@ const ListadoPartidos = () => {
         
         <>
         <div className="contenedor1 otro">
-            <h1 className="titulo1">LISTA DE JUGADORES</h1>
-            <p className="pp">listados de jugadores inscritos en el equipo: ---------------xxxxxxxxxxx-------------------</p>
+            <h1 className="titulo1">LISTA DE PARTIDOS</h1>
+            <p className="pp">listados de partidos: ---------------xxxxxxxxxxx-------------------</p>
             <div className="contenedorv1">
                 <Character caracteres={user}></Character>
                       {/**  <div>

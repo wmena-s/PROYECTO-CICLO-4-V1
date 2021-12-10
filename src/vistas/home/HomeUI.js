@@ -16,17 +16,17 @@ const HomeUE = () => {
                      <Modals/>
                 </div>
                 <div className="colormodal">
-                    <h1>Registro de Usuario</h1>
+                    <h1>Crear Campeonato</h1>
                     <img src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ff9c9c25823839.5635e2cc80413.png' alt="animals"></img>
                      <Modaless/>
                 </div>
                 <div className="colormodal">
-                    <h1>Regitrar equipos</h1>
+                    <h1>Gestionar Campeonatos</h1>
                     <img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/d9293225823839.5634b5167acb8.png' alt="animals"></img>
                      <ModalRegistrar/>
                 </div>
                 <div className="colormodal">
-                    <h1>Lista de jugadores</h1>
+                    <h1>Estadísticas</h1>
                     <img src='https://pre00.deviantart.net/a8d8/th/pre/i/2016/345/2/4/james_harden_by_irockmedia-dar8t3p.jpg ' alt="animals"></img>
                      <ModalRegistrar2></ModalRegistrar2>
                 </div>
