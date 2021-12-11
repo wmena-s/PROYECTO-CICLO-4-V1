@@ -2,8 +2,9 @@ import {Carousel} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Nav.css'
 import './inicio.css'
-import {UsuarioExternos} from '../vistas/modal/Modals'
+import {UsuarioExternos, Modaless} from '../vistas/modal/Modals'
 import Login from '../vistas/login-register-aa/login'
+
 
 const Inicio = () => {
     return (
@@ -31,8 +32,9 @@ const Inicio = () => {
                 />
 
                 <Carousel.Caption>
-                  <h3>Second slide label</h3>
+                  <h3>registrar usuario  interno</h3>
                   <p className="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Modaless/>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>

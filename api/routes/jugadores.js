@@ -18,7 +18,8 @@ router.post('/', async function(req, res){
 
 // todos los jugadores
 router.get('/', async function (req, res) {
-  const jugadorU = await jugadores.find({cedula:5}).exec();
+  const jugadorU = await jugadores.find();
+  //const jugadorU = await jugadores.find({cedula:5}).exec();
   console.log(jugadorU);
   res.send(jugadorU);
 });

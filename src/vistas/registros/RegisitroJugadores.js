@@ -11,16 +11,33 @@ class RegisitroJugadores extends React.Component {
         this.state = {
             jugador: {
                 "nombre": "",
-                "usuario": "",
+                "cedula": "",
                 "edad": "",
                 "campeonato": "",
-                "equipo":""
+                "equipo":"ninguno"
             },
+               ///renderizado prueba  lista desplegable
+               items:[],
+               ///renderizado prueba
         };
         this.manejarCambio = this.manejarCambio.bind(this);
         this.manejarEnvioDeFormulario = this.manejarEnvioDeFormulario.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
+ 
+    componentDidMount() {
+        fetch(`${Constantes.RUTA_API}`)
+        .then(result=>result.json())
+        .then(items=>{
+            console.log(items);
+            console.log('variable' + items[0].nombre)
+            this.setState({
+            
+                items:items
+            })
+        })
+    }
 
     render(){
         return (
@@ -29,6 +46,7 @@ class RegisitroJugadores extends React.Component {
                 <h1>
                   REGISTRO DE JUGADORES
                 </h1>
+
                 <div className="contanedorgeneral">
                      <div className="row">
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>
@@ -50,7 +68,18 @@ class RegisitroJugadores extends React.Component {
                         </div> */}
                         <div className="form-group">
                             <label className="label" htmlFor="equipo">equipo:</label>
-                            <input className="form-control" placeholder="equipo" id="equipo" name="equipo" onChange={this.manejarCambio} value={this.state.jugador.equipo} ></input>
+{/* prueba de renderizado- lista desplegable */}
+                    <select className="form-control" id="equipo" name="equipo" onChange={this.manejarCambio}>
+                        {this.state.items.map((item1)=>{
+                        return(                      
+                            <option key={item1.nombre} value={item1.nombre}>{item1.nombre}</option >                    
+                        )
+                        })}
+                    </select>
+{/* prueba de renderizado */} 
+{/* desbloquear el siguiente codigo si no funciona */}
+                            {/* <input className="form-control" placeholder="equipo" id="equipo" name="equipo" onChange={this.manejarCambio} value={this.state.jugador.equipo} ></input>
+                         */}
                         </div>
                         <button className="btn btn-dark">Guardar</button>
                     </form>
@@ -114,6 +143,20 @@ class RegisitroJugadores extends React.Component {
             }
         });
     }
-}
+
+
+    //https://www.codegrepper.com/code-examples/html/react+js+form+select+options
+    //aun no funciona.
+
+
+    // no fue usado el handleChange
+handleChange(event) {
+        const variable = event.target.value
+        console.log('variable ingresada' + " "+ variable)
+        this.setState({
+            jugador: {equipo: variable}
+        });
+        console.log('variable guardad' + " "+this.state.jugador.equipo)
+}}
 
 export default RegisitroJugadores;

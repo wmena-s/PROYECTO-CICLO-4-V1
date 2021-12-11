@@ -8,27 +8,54 @@ class New extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+           
             equipo: {
                 "nombre": "",
                 "usuario": "",
                 "correo": "",
                 "contraseña": "",
             },
+            ///renderizado prueba  lista desplegable
+            items:[],
+            ///renderizado prueba
         };
         this.manejarCambio = this.manejarCambio.bind(this);
         this.manejarEnvioDeFormulario = this.manejarEnvioDeFormulario.bind(this);
     }
 
     
-  
+    componentDidMount() {
+        fetch(`${Constantes.RUTA_API4}`)
+        .then(result=>result.json())
+        .then(items=>{
+            console.log(items);
+            this.setState({
+            
+                items:items
+            })
+        })
+    }
+
 
     render(){
         return (
             <div className="App">
+                
               <header className="App-header">
                 <h1>
-                  REGISTRO DE USUARIOS INTERNOS
+                  REGISTRO DE USUARIOS INTERNOS                 
                 </h1>
+
+{/* prueba de renderizado- lista desplegable */}
+                    <select>
+                        {this.state.items.map((item1)=>{
+                        return(                      
+                            <option value={item1.nombre}>{item1.nombre}</option >                    
+                        )
+                        })}
+                    </select>
+{/* prueba de renderizado */}            
+             
                 <div className="contanedorgeneral">
                 <div>
                     <form className="field" onSubmit={this.manejarEnvioDeFormulario}>

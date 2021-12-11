@@ -1,4 +1,4 @@
-import {Modals, Modaless, ModalesD, ModalRegistrar, ModalRegistrar2} from '../modal/Modals'
+import {Modals, Modaless, ModalesD, ModalRegistrar, ModalRegistrar2, UsuarioExternos} from '../modal/Modals'
 import './HomeUE.css'
 
 
@@ -11,7 +11,7 @@ const HomeUE = () => {
                 <div className="colormodal">
                     <h1>Registro UE</h1>
                     <img  src='https://i.pinimg.com/originals/c7/91/3d/c7913d43b3677d55960c7f6f0cbe19ce.jpg' alt="baskets"></img>
-                     <Modals/>
+                     <UsuarioExternos/>
                 </div>
                 <div className="colormodal">
                     <h1>Regitrar Equipos</h1>

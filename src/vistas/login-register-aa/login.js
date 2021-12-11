@@ -81,10 +81,15 @@ const Form = ({onSubmit}) => {
           <button style={submitStyle} type="submit">Submit</button>
         </div>
         <br/>
-        <Link to="/registrar"> Registrarme ahora </Link>
+
+              <Link to="/usuario_externo/RegisitroUE">  Registro usuario externo </Link>
+              <Link to="/usuarioInterno/registro">  Registrarme usuario interno </Link>
+
       </form>
     );
 };
+
+
 
 // Usage example:
 

@@ -8,11 +8,18 @@ import Chart from '../../ChartV'
 const ListaJugadores = () => {
 
     const [user, setUser] = useState([]);
+    const [useres, setUsers] = useState([]);
 
     useEffect(()=>{
-        fetch(`${Constantes.RUTA_API3}`)
+        fetch(`${Constantes.RUTA_AP2}`)
         .then(res => res.json())
         .then(data=> setUser(data))
+    },[]);
+
+    useEffect(()=>{
+        fetch(`${Constantes.RUTA_API4}`)
+        .then(res => res.json())
+        .then(data=> setUsers(data))
     },[]);
 
     return (
@@ -23,8 +30,11 @@ const ListaJugadores = () => {
             <div className="contenedorv1">
                 
                 <Character caracteres={user}></Character>
-                     
+
+
             </div>
+
+
             <div className="canvass">
                 <Chart x={user.map((item)=>(item.nombre))} y={user.map((item)=>(item.edad))} titulo="edad" namex="nombre" namey="edad"/>
             </div>

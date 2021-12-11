@@ -1,5 +1,5 @@
 const mongoose = require('../conexion_mongo');  
-const CrearEquipo = mongoose.model('Equipos', {
+const crearEquipo = mongoose.model('Equipos', {
     nombre: {
         type: String,
         required: true,
@@ -22,6 +22,6 @@ const CrearEquipo = mongoose.model('Equipos', {
     },
 });
 
-module.exports = CrearEquipo;
+module.exports = crearEquipo;
 
 
