@@ -12,10 +12,11 @@ const crearEquipo = mongoose.model('Equipos', {
         type: String,
         required: true,
     },
-    campeonato: {
-        type: String,
-        default: "",
-    },
+    campeonato: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'crearCampeonato',
+        required: false
+    }],
     nombreEquipo: {
         type: String,
         default: "",

@@ -26,7 +26,8 @@ import EquiposInscritos from './vistas/usuarioInterno/EquiposInscritos';
 import CrearCampeonato from './vistas/usuarioInterno/CrearCampeonato';
 import GestionarCampeonato from './vistas/usuarioInterno/GestionarCampeonato';
 import ListadoPartidos from './vistas/usuarioInterno/ListadoPartidos';
-
+import InscripcionCampeonato from './campeonato/inscripcionCampeonato';
+import { DataProvider } from './funcionalidades/DataContext';
 
 
 function App() {
@@ -35,8 +36,11 @@ function App() {
     <div className="App">
       <div className="section">
             <div className="columns">
+           
             <BrowserRouter>
+            <DataProvider>
             <Navegacion></Navegacion>
+
             <Routes>  
               <Route path="/" element={<Inicio />}/>
               <Route path="/usuario_externo/equipos/inscrbir" element={<RegistroDeEquipos />} />
@@ -56,7 +60,6 @@ function App() {
               <Route path='/home/homeUE' element={<HomeUE/>} exacta />
               <Route path='/home/homeUI' element={<HomeUI/>} exacta />
 
-
                 {/*aaron*/}
                 <Route path='/login' element={<Login/>} exacta />
                 <Route path='/registrar' element={<Registrar/>} exacta />
@@ -66,14 +69,19 @@ function App() {
               <Route path='/administrador/Dashboard' element={<Dashboard/>} exacta />
               <Route path='/adminsitrador/homeA' element={<HomeA/>} exacta />
                 <Route path='/login' element={<Logins/>} exacta />
+                {/* registro de campeonato */}
+              <Route path='/usuario_externo/registro' element={<InscripcionCampeonato/>} exacta />
              {/* <Route path="/listado" element={<Listados/> } exacta />*/}
               <Route path="*" element={<NoFount />} />
+
+              
 
             </Routes>
 
             <Foover></Foover>
-            </BrowserRouter>,
-         
+            </DataProvider>
+            </BrowserRouter>
+          
             </div>
           </div>
           

@@ -4,6 +4,7 @@ import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Formularios from '../plantillas/Formularios'
 import './registroJugador.css';
+import {DataContext} from "../../funcionalidades/DataContext";
 
 class RegisitroJugadores extends React.Component {
     constructor(props) {
@@ -40,6 +41,7 @@ class RegisitroJugadores extends React.Component {
     }
 
     render(){
+
         return (
             <div className="App">
               <header className="App-header">
@@ -70,9 +72,10 @@ class RegisitroJugadores extends React.Component {
                             <label className="label" htmlFor="equipo">equipo:</label>
 {/* prueba de renderizado- lista desplegable */}
                     <select className="form-control" id="equipo" name="equipo" onChange={this.manejarCambio}>
+                        <option>seleccionar</option>
                         {this.state.items.map((item1)=>{
                         return(                      
-                            <option key={item1.nombre} value={item1.nombre}>{item1.nombre}</option >                    
+                            <option key={item1._id} value={item1._id}>{item1.nombre}</option >
                         )
                         })}
                     </select>
@@ -145,18 +148,21 @@ class RegisitroJugadores extends React.Component {
     }
 
 
-    //https://www.codegrepper.com/code-examples/html/react+js+form+select+options
-    //aun no funciona.
+                    //https://www.codegrepper.com/code-examples/html/react+js+form+select+options
+                    //aun no funciona.
 
 
-    // no fue usado el handleChange
-handleChange(event) {
-        const variable = event.target.value
-        console.log('variable ingresada' + " "+ variable)
-        this.setState({
-            jugador: {equipo: variable}
-        });
-        console.log('variable guardad' + " "+this.state.jugador.equipo)
-}}
+                    // no fue usado el handleChange
+                handleChange(event) {
+                        const variable = event.target.value
+                        console.log('variable ingresada' + " "+ variable)
+                        this.setState({
+                            jugador: {equipo: variable}
+                        });
+                        console.log('variable guardad' + " "+this.state.jugador.equipo)
+                }
+
+        }
+
 
 export default RegisitroJugadores;

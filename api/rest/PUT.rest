@@ -1,0 +1,6 @@
+PUT http://localhost:5000/registros/61b6a82cfad485605157befe
+content-type: application/json
+
+{
+	"campeonato": "5ssaa"
+}

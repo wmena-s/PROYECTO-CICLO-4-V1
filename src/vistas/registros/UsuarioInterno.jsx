@@ -45,16 +45,6 @@ class New extends React.Component {
                 <h1>
                   REGISTRO DE USUARIOS INTERNOS                 
                 </h1>
-
-{/* prueba de renderizado- lista desplegable */}
-                    <select>
-                        {this.state.items.map((item1)=>{
-                        return(                      
-                            <option value={item1.nombre}>{item1.nombre}</option >                    
-                        )
-                        })}
-                    </select>
-{/* prueba de renderizado */}            
              
                 <div className="contanedorgeneral">
                 <div>

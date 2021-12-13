@@ -28,6 +28,10 @@ const crearCampeonato = mongoose.model('Campeonatos', {
         type: String,
         default: "",
     },
+    estado: {
+        type: String,
+        default: "",
+    },
 });
 
 module.exports = crearCampeonato;

@@ -31,17 +31,27 @@ router.get('/:id', async function (req, res){
   res.send(equipo)
 })
 
-router.put('/', async function(req, res){
-  await CrearEquipo.findOneAndUpdate({
-    _id: req.body._id,
-  }, {
-    nombre: req.body.nombre,
-    usuaro: req.body.usuario,
-    correo: req.body.correo,
-    campeonato: req.body.campeonato,
-    nombreEquipo: req.body.nombreEquipo
-  });
-  res.send(true);
+// router.put('/', async function(req, res){
+//   await CrearEquipo.findOneAndUpdate({
+//     _id: req.body._id,
+//   }, {
+//     nombre: req.body.nombre,
+//     usuaro: req.body.usuario,
+//     correo: req.body.correo,
+//     campeonato: req.body.campeonato,
+//     nombreEquipo: req.body.nombreEquipo
+//   });
+//   res.send(true);
+// });
+
+router.put('/:id', async function (req, res){
+  
+  try{
+    const modificar = await CrearEquipo.findByIdAndUpdate(req.params.id, req.body);
+      res.status(200).json(modificar);
+  }catch (error){
+    res.status(400)
+  }
 });
 
 router.delete('/:id', async function (req, res){

@@ -14,15 +14,15 @@ const jugador = mongoose.model('jugadores', {
         required: true,
     },
     equipo: 
-    // [{
-    //     type: mongoose.Types.ObjectId,
-    //     ref: 'CrearEquipo',
-    //     required: false
-    // }]
-    {
-        type: String,
-        default: "",
-    },
+    [{
+         type: mongoose.Types.ObjectId,
+         ref: 'crearEquipo',
+         required: false
+     }],
+    //{
+      //  type: String,
+       // default: "",
+    //},
     campeonato: {
         type: String,
         default: "",

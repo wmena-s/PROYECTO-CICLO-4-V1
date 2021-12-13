@@ -1,10 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\api",
     "\\src",
-    "\\src\\vistas"
+    "\\src\\campeonato",
+    "\\src\\vistas",
+    "\\src\\vistas\\login-register-aa",
+    "\\src\\vistas\\modal",
+    "\\src\\vistas\\plantillas",
+    "\\src\\vistas\\registros",
+    "\\src\\vistas\\rutasPrivadas",
+    "\\src\\vistas\\usuario_externo"
   ],
-  "SelectedNode": "\\src\\vistas\\New.js",
+  "SelectedNode": "\\src\\campeonato\\inscripcionCampeonato.jsx",
   "PreviewInSolutionExplorer": false
 }

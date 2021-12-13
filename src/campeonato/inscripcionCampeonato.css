@@ -1,0 +1,22 @@
+.titulo{
+    font-size: 60px;
+    color: red;
+
+}
+
+.labelO{
+    color: blue;
+}
+
+.selectoO{
+    width: 20%;
+    justify-self: center;
+    margin: 5px 0px;
+
+}
+
+.container0{
+    display: grid;
+    grid-template-columns: 1fr ;
+
+}
