@@ -77,9 +77,19 @@ const InscripcionCampeonato = () => {
               'Content-Type': 'application/json'
             }
           })
-          console.log("HLOO")
+          alert("selección realizada")
+
+          setEstado("inscrito")
         }
-       
+        
+        const [estadoInscricpion, setEstadoInscripcion] =  useState("no instricto");
+
+
+        // const cambiarEstadoInscripcion= function (e) {
+        //     setEstado("inscrito")
+        // }
+
+
     return (
         <div>
             <h2 className="titulo">hola mundo</h2>
@@ -98,23 +108,25 @@ const InscripcionCampeonato = () => {
                 <select className="selectoO" onChange={selectt2}>
                     <option value={-1} > selecciona una opcion</option>
                    { equipos.map((item)=>{
-                       return(<option key={item._id} value={item._id}>{item.nombre}</option>)
-                        
+                       return(<option key={item._id} value={item._id}>{item.nombre}</option>)   
                    })}
                     
                 </select>
 
-
-                <label htmlFor=""> estado de inscripcion</label>
+                {/* <label htmlFor=""> estado de inscripcion</label>
                 <p>{estado}</p>
                 <label htmlFor=""> estado de inscrdipcion</label>
-                <p>{estado2}</p>
+                <p>{estado2}</p> */}
 
                 <form action="" onClick={enviarDatos}>
-                    <label htmlFor=""> codigo del campeonato //mostrará el estado del campeonato </label>
-                    <input name="campeonato" id="campeonato" type="text" placeholder="estado" value={estado}/>
+                    {/* <label htmlFor=""> codigo del campeonato //mostrará el estado del campeonato </label>
+                    <input name="campeonato" id="campeonato" type="text" placeholder="estado" value={estado}/> */}
                     <button> enviar</button>
                 </form>
+
+                <h2>                    estado de inscripcion                 </h2>
+                <p>{estadoInscricpion}</p>
+             
             </div>
         </div>
     )
