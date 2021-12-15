@@ -30,7 +30,8 @@ function GestionarCampeonato() {
 
     //buscar el torneo (barra buscadora)
         const [dat, setDat]=useState({
-            nombre:""
+            nombre:"",
+            estado:""
         });
 
         const[actual,setActual]= useState([])
@@ -56,31 +57,9 @@ function GestionarCampeonato() {
 
         function Mostrar(){
             setActual(datos.find(buscar))
+            console.log(actual)
         }
 
-        /* //state
-        
-        //agregar valores al state 
-        const  manejarcambio=(evento)=>{
-        setDatos({
-            ...datos,
-            [evento.target.name]: evento.target.value
-        });
-        }
-        //boton buscar
-        const recuperarDatos=async (evento)=>{
-            try {
-              evento.preventDefault();
-                  const respuesta = await fetch(`${Constantes.RUTA_API5}/:${datos.nombre}`);
-                  console.log(respuesta.json());
-              }catch(error){
-                  console.log(error);
-              }
-            }
-        */
-
-
-    //mostrar los datos del torneo
 
 
     return (
@@ -109,11 +88,18 @@ function GestionarCampeonato() {
                         <ul className="list-unstyled">
                             <li><span className="fw-bold">Campeonato:</span> tipo</li>
                             <li><span className="fw-bold">Lugar:</span> {actual.ubicacion}</li>
-                            <li><span className="fw-bold">Estado:</span> {actual.estado}</li>
+                            <li><span className="fw-bold">Estado:</span> 
+                                <select name="estado" id="estado" onChange={manejarcambio}>
+                                <option value={actual.estado}>{actual.estado}</option>
+                                <option value="Aceptando inscripciones">Aceptando inscripciones</option>
+                                <option value="Inscripciones cerradas">Inscripciones cerradas</option>
+                                <option value="En curso">En curso</option>
+                                <option value="Terminado">Terminado</option>
+                                </select></li>
                             <li><span className="fw-bold">Inicia:</span> {actual.fechaI}</li>
                             <li><span className="fw-bold">Finaliza:</span> {actual.fechaF}</li>
                         </ul>
-                        <button className="btn-success">Editar</button>
+                        <button className="btn-success">actualizar</button>
                     </div>
                     <div className="col">
                         <div className="">
