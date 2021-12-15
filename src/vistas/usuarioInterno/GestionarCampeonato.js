@@ -30,15 +30,27 @@ function GestionarCampeonato() {
 
     //buscar el torneo (barra buscadora)
         const [dat, setDat]=useState({
-            nombre:"",
+            nombre: "",
+            descripcion: "",
+            ubicacion: "",
+            fechaI: "",
+            fechaF: "",
+            premio1: "",
+            premio2: "",
             estado:""
         });
 
         const[actual,setActual]= useState([])
 
-        const  manejarcambio=(evento)=>{
+        const  cambiobusqueda=(evento)=>{
             setDat({
                 ...dat,
+                [evento.target.name]: evento.target.value
+            });
+        }
+        const  cambioactualizar=(evento)=>{
+            setActual({
+                ...actual,
                 [evento.target.name]: evento.target.value
             });
         }
@@ -56,10 +68,42 @@ function GestionarCampeonato() {
         }
 
         function Mostrar(){
-            setActual(datos.find(buscar))
-            console.log(actual)
+            setActual(datos.find(buscar));
+            console.log(datos)
         }
 
+        const actualizar= async()=>{
+            try {
+                    const respuesta = await fetch(`${Constantes.RUTA_API5}`, {
+                        method: 'PUT',
+                        body: JSON.stringify(actual),
+                        headers: {
+                            'Content-Type' : 'application/json',
+                        }
+                    });
+                    const exitoso = await respuesta.json();
+                    if (exitoso) {
+                       alert("finalizado")
+                    }
+              
+                }catch(error){
+                    console.log(error);
+                }
+        }
+        const eliminar = async()=>{
+            try {
+                const respuesta = await fetch(`${Constantes.RUTA_API5}/${actual._id}`, {
+                    method: 'DELETE',
+                });
+                const exitoso = await respuesta.json();
+                if (exitoso) {
+                   alert("finalizado")
+                }
+          
+            }catch(error){
+                console.log(error);
+            }
+        }
 
 
     return (
@@ -70,7 +114,7 @@ function GestionarCampeonato() {
                 <div className="row">
                     <div className='col'>
                     <div>
-                        <input type='text' style={inputStyle} id='nombre' name='nombre' onChange={manejarcambio}/>
+                        <input type='text' style={inputStyle} id='nombre' name='nombre' onChange={cambiobusqueda}/>
                     </div>
                     </div>
                     <div className='col'>
@@ -89,7 +133,7 @@ function GestionarCampeonato() {
                             <li><span className="fw-bold">Campeonato:</span> tipo</li>
                             <li><span className="fw-bold">Lugar:</span> {actual.ubicacion}</li>
                             <li><span className="fw-bold">Estado:</span> 
-                                <select name="estado" id="estado" onChange={manejarcambio}>
+                                <select name="estado" id="estado" onChange={cambioactualizar}>
                                 <option value={actual.estado}>{actual.estado}</option>
                                 <option value="Aceptando inscripciones">Aceptando inscripciones</option>
                                 <option value="Inscripciones cerradas">Inscripciones cerradas</option>
@@ -99,7 +143,9 @@ function GestionarCampeonato() {
                             <li><span className="fw-bold">Inicia:</span> {actual.fechaI}</li>
                             <li><span className="fw-bold">Finaliza:</span> {actual.fechaF}</li>
                         </ul>
-                        <button className="btn-success">actualizar</button>
+                        <button className="btn-warning" onClick={eliminar}>Eliminar</button>
+                        <button className="btn-success" onClick={actualizar}>actualizar</button>
+                        
                     </div>
                     <div className="col">
                         <div className="">
