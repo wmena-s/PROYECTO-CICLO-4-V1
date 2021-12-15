@@ -1,12 +1,12 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom'; 
 import Cookies from 'universal-cookie/es6';
 import axios from 'axios';
 import Constantes from '../../Constantes'
 
+
 const cookies = new Cookies();
-const baseUrl="http://localhost:3001/Profiles"
 
 const appStyle = {
     height: '500px',
@@ -94,25 +94,32 @@ const Form = ({onSubmit}) => {
 // Usage example:
 
 const Login = () => {
+      const [UI, setUI] = useState([]);
+      const [UE, setUE] = useState([]);
+      useEffect(()=>{
+          fetch(`${Constantes.RUTA_API2}`)
+          .then(res => res.json())
+          .then(data=> setUI(data))
+      },[]);
+      useEffect(()=>{
+        fetch(`${Constantes.RUTA_API4}`)
+        .then(res => res.json())
+        .then(data=> setUE(data))
+      },[]);
     const handleSubmit = async(data) => {
-        await axios.get(baseUrl, {params:{username: data.username, password: data.password}})
-        .then(response=>{
-          return response.data;
-        })
-        .then(response=>{
-          if(response.length>0){
-              var respuesta=response[0];
-              cookies.set('username', respuesta.username, {path: "/"});
-              cookies.set('password', respuesta.password, {path: "/"});
-              cookies.set('rol', respuesta.rol, {path: "/"});
-              alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`);
-              window.location.href="/registrar";
+      function buscar(a){
+        return (a.usuario == data.username && a.contraseña == data.password);
+      }
+      if (UI.find(buscar)){
+        window.location.assign("/home/homeUI")
+      }
+      else{
+          if(UE.find(buscar)){
+            window.location.assign("/home/homeUE")
           }else{
-              alert('El usuario o la contraseña no son correctos');
+            alert("no se encontro un perfil con los datos ingresados")
           }
-      })
-
-
+      }
     };
     return (
       <div style={appStyle}>
