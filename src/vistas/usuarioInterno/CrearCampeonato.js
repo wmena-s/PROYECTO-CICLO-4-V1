@@ -27,7 +27,6 @@ const  manejarcambio=(evento)=>{
 const enviarDatos=async (evento)=>{
 try {
   evento.preventDefault();
-  console.log(datos)
   /*await Axios.post(`${Constantes.RUTA_API2}`, 
       {
           body: JSON.stringify(datos),
@@ -49,6 +48,27 @@ try {
       console.log(error);
   }
 }
+
+const recuperarDatos=async (evento)=>{
+  try {
+    evento.preventDefault();
+    /*await Axios.post(`${Constantes.RUTA_API2}`, 
+        {
+            body: JSON.stringify(datos),
+            headers: {'Content-Type' : 'application/json'},
+        })*/
+        const respuesta = await fetch(`${Constantes.RUTA_API5}/:${datos.nombre}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type' : 'application/json',
+            }
+        });
+        console.log(respuesta.json());
+  
+    }catch(error){
+        console.log(error);
+    }
+  }
 
   return (
     <>
@@ -148,7 +168,7 @@ try {
                 onChange={manejarcambio}
               ></input>
             </div>
-            <button className="btn btn-dark">Editar</button>
+            <button className="btn btn-dark" onClick={recuperarDatos}>Editar</button>
             <button type="submit" className="btn btn-dark">Crear</button>
           </form>
         </div>
