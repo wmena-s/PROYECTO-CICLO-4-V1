@@ -2,20 +2,20 @@ const mongoose = require('../conexion_mongo');
 const crearEquipo = mongoose.model('Equipos', {
     nombre: {
         type: String,
-        required: true,
+        default: "",
     },
     usuario: {
         type: String,
-        required: true,
+        default: "",
     },
     correo: {
         type: String,
-        required: true,
+        default: "",
     },
     campeonato: [{
         type: mongoose.Types.ObjectId,
         ref: 'crearCampeonato',
-        required: false
+        default: [],
     }],
     nombreEquipo: {
         type: String,

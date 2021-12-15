@@ -11,7 +11,6 @@ router.post('/', async function(req, res){
     nombre: req.body.nombre,
     usuario: req.body.usuario,
     correo: req.body.correo,
-    campeonato: req.body.campeonato,
     nombreEquipo: req.body.nombreEquipo
   });
   await equipo.save();
