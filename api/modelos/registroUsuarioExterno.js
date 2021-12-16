@@ -1,4 +1,8 @@
 const mongoose = require('../conexion_mongo');  
+const bcrypt =require('bcrypt')
+
+
+
 const usuarioExterno = mongoose.model('usuarioExterno', {
     nombre: {
         type: String,
