@@ -112,10 +112,14 @@ const Login = () => {
       }
       if (UI.find(buscar)){
         window.location.assign("/home/homeUI")
+        cookies.set('usuario',data.username)
+        cookies.set('tusuario','UI')
       }
       else{
           if(UE.find(buscar)){
             window.location.assign("/home/homeUE")
+            cookies.set('usuario',data.username)
+            cookies.set('tusuario','UI')
           }else{
             alert("no se encontro un perfil con los datos ingresados")
           }

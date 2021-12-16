@@ -72,7 +72,7 @@ function GestionarCampeonato() {
             console.log(datos)
         }
 
-        const actualizar= async()=>{
+        const actualizar= async(evento)=>{
             try {
                     const respuesta = await fetch(`${Constantes.RUTA_API5}`, {
                         method: 'PUT',
@@ -83,7 +83,9 @@ function GestionarCampeonato() {
                     });
                     const exitoso = await respuesta.json();
                     if (exitoso) {
+                        evento.preventDefault();
                        alert("finalizado")
+                       window.location.reload();
                     }
               
                 }catch(error){
@@ -98,6 +100,7 @@ function GestionarCampeonato() {
                 const exitoso = await respuesta.json();
                 if (exitoso) {
                    alert("finalizado")
+                   window.location.reload();
                 }
           
             }catch(error){
