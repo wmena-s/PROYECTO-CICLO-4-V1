@@ -7,6 +7,7 @@ var usuarioInterno = require('./routes/usuariosInternos');// se conecta con la r
 var usuarioExterno = require('./routes/usuariosExterno');// se conecta con la ruta de usuario interno y esta a su vez con el modelo registro usuario interno
 var jugadores = require('./routes/jugadores');
 var campeonatos  = require('./routes/campeonatos');
+var estadoSolicitud  = require('./routes/estadosSolicitudes.jsx');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/registros', jugadorRouter)
+app.use('/estadosSolicitud', estadoSolicitud)
 app.use('/usuarioInterno', usuarioInterno )
 app.use('/usuarioExterno', usuarioExterno )
 app.use('/jugadores', jugadores )

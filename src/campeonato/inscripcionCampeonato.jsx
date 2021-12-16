@@ -1,11 +1,13 @@
 import React, { useEffect, useState} from "react"
 import Constantes from '../Constantes'
+import Inscripciones from "../vistas/login-register-aa/Inscripciones";
 import './inscripcionCampeonato.css'
 
 const InscripcionCampeonato = () => {
 
     //cargar listado de campeonatos
     const [users, setUser] = useState([]);
+    const [existe, setExiste] = useState([]);
 
     useEffect(()=>{
         fetch(`${Constantes.RUTA_API5}`)
@@ -13,21 +15,20 @@ const InscripcionCampeonato = () => {
         .then(data=> setUser(data))
     },[]);
 
-
-
     //cargar listado de equpos
     const [equipos, setEquipo] = useState([]);
-
+    
     useEffect(()=>{
         fetch(`${Constantes.RUTA_API}`)
         .then(res => res.json())
         .then(data=> setEquipo(data))
     },[]);
 
+
     const [estado, setEstado] = useState(-1);
     const [estado2, setEstado2] = useState(-1);
 
-    console.log(estado)
+   // console.log(estado)
     
 
     const selectt= function (e) {
@@ -35,11 +36,30 @@ const InscripcionCampeonato = () => {
         setEstado(opcion)
     }
 
+    const [llevar, setLlevar] = useState("")
+    
     const selectt2= function (e) {
         const opcion=e.target.value;
         setEstado2(opcion)
+        setLlevar(e.target.value)
+       
+
+        fetch(`${Constantes.RUTA_API6}${'/'}${'todo'}${'/'}${e.target.value}`)
+        .then(res => res.json())
+        .then(data=> setExiste(data))
+        
+ 
     }
+ 
     
+    // //revisa el estado de la isncripcion para un euipo usar en otra vista
+    
+    // const estadoinicial = fetch(`${Constantes.RUTA_API6}${'/'}${'61b81c631446c44e2610d931'}`)
+    // .then(response => response.json())
+    // .then(data => console.log(data));
+    
+
+ //revisar el estado en que quedo el equpo.
  
 
     // const enviarDatos=async (evento)=>{
@@ -67,9 +87,11 @@ const InscripcionCampeonato = () => {
 
     async function enviarDatos (e){
         e.preventDefault();
-        var data = {campeonato: [{estado}.estado]};
+        const data = {campeonato: [{estado}.estado]};
+        //datos a enviar al formulario solicitudes
+        const datados={equipo: {estado2}.estado2, campeonato:  {estado}.estado, estado: 'pendiente'}
         
-        
+        //envia id del campeonato segun el id pasado en la direccion.
         fetch(`${Constantes.RUTA_API}${'/'}${estado2}`, {
             method: 'PUT', // or 'PUT'
             body: JSON.stringify(data), // data can be `string` or {object}!
@@ -80,11 +102,24 @@ const InscripcionCampeonato = () => {
           alert("selección realizada")
 
           setEstado("inscrito")
+
+          //envia documento
+        await fetch(`${Constantes.RUTA_API6}`, {
+            method: 'POST',
+            body: JSON.stringify(datados),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+            
+        })
+
+
         }
+
         
-        const [estadoInscricpion, setEstadoInscripcion] =  useState("no instricto");
 
-
+        
+       
         // const cambiarEstadoInscripcion= function (e) {
         //     setEstado("inscrito")
         // }
@@ -113,10 +148,7 @@ const InscripcionCampeonato = () => {
                     
                 </select>
 
-                {/* <label htmlFor=""> estado de inscripcion</label>
-                <p>{estado}</p>
-                <label htmlFor=""> estado de inscrdipcion</label>
-                <p>{estado2}</p> */}
+           
 
                 <form action="" onClick={enviarDatos}>
                     {/* <label htmlFor=""> codigo del campeonato //mostrará el estado del campeonato </label>
@@ -124,9 +156,34 @@ const InscripcionCampeonato = () => {
                     <button> enviar</button>
                 </form>
 
-                <h2>                    estado de inscripcion                 </h2>
-                <p>{estadoInscricpion}</p>
-             
+                    <div>
+                        {
+                            
+
+                            existe[0]!=null? (<><p>estado de inscripcion</p><Inscripciones item={llevar}></Inscripciones></>): (<p>
+                               
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">equipo</th>
+                                    <th scope="col">campoenato</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>no existe</th>
+                                    <td>no existe</td>
+                                    <td>no existe</td>
+                                    </tr>
+                                </tbody>
+                                
+                                </table>   
+                                no exisate
+                                </p>)
+                        }
+                    </div>
+                    
             </div>
         </div>
     )

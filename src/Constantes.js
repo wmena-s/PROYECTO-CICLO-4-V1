@@ -4,6 +4,7 @@ const Constantes = {
     RUTA_API3: 'http://localhost:5000/jugadores',
     RUTA_API4: 'http://localhost:5000/usuarioExterno',
     RUTA_API5: 'http://localhost:5000/campeonato',
+    RUTA_API6: 'http://localhost:5000/estadosSolicitud',
 };
 export default Constantes;
 
