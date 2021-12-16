@@ -29,7 +29,7 @@ router.get('/', async function (req, res) {
 
 //buscar Campeonatos por id
 router.get('/:id', async function (req, res){
-  const campeonato = await CrearCampeonato.findById(req.params.id);
+  const campeonato = await CrearCampeonato.findOne({nombre: req.params.id});
   res.send(campeonato)
 })
 

@@ -67,9 +67,20 @@ function GestionarCampeonato() {
             return a.nombre == dat.nombre;
         }
 
-        function Mostrar(){
-            setActual(datos.find(buscar));
-            console.log(datos)
+        const Mostrar = async()=>{
+            try {
+                const respuesta = await fetch(`${Constantes.RUTA_API5}/${dat.nombre}`, {
+                    method: 'GET'
+                });
+                const exitoso = await respuesta.json();
+                if (exitoso) {
+                    console.log(actual)
+                    setActual(exitoso)
+                }
+          
+            }catch(error){
+                console.log(error);
+            }
         }
 
         const actualizar= async(evento)=>{
@@ -83,9 +94,7 @@ function GestionarCampeonato() {
                     });
                     const exitoso = await respuesta.json();
                     if (exitoso) {
-                        evento.preventDefault();
-                       alert("finalizado")
-                       window.location.reload();
+                        window.location.reload();
                     }
               
                 }catch(error){
@@ -117,7 +126,12 @@ function GestionarCampeonato() {
                 <div className="row">
                     <div className='col'>
                     <div>
-                        <input type='text' style={inputStyle} id='nombre' name='nombre' onChange={cambiobusqueda}/>
+                                <select name="nombre" id="nombre" onChange={cambiobusqueda} className='form-control' style={inputStyle}>
+                                    <option value='' selected></option>
+                                {datos.map(item=>(
+                                    <option value={item.nombre}>{item.nombre}</option>
+                                ))}
+                                </select>
                     </div>
                     </div>
                     <div className='col'>
@@ -137,7 +151,7 @@ function GestionarCampeonato() {
                             <li><span className="fw-bold">Lugar:</span> {actual.ubicacion}</li>
                             <li><span className="fw-bold">Estado:</span> 
                                 <select name="estado" id="estado" onChange={cambioactualizar}>
-                                <option value={actual.estado}>{actual.estado}</option>
+                                <option value={actual.estado} selected>{actual.estado}</option>
                                 <option value="Aceptando inscripciones">Aceptando inscripciones</option>
                                 <option value="Inscripciones cerradas">Inscripciones cerradas</option>
                                 <option value="En curso">En curso</option>
