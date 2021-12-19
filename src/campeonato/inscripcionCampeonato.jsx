@@ -127,8 +127,9 @@ const InscripcionCampeonato = () => {
 
     return (
         <div>
-            <h2 className="titulo">hola mundo</h2>
+            <h2 className="titulo">Registro</h2>
             <div className="container0">
+                <div>
                <h2>seleccione campeonato</h2>
                 <select className="selectoO" onChange={selectt}>
                     <option value={-1} > selecciona una opcion</option>
@@ -138,7 +139,9 @@ const InscripcionCampeonato = () => {
                    })}
                     
                 </select>
+                </div>
 
+                <div>
                 <h2>seleccione equpo</h2>
                 <select className="selectoO" onChange={selectt2}>
                     <option value={-1} > selecciona una opcion</option>
@@ -147,16 +150,18 @@ const InscripcionCampeonato = () => {
                    })}
                     
                 </select>
+                </div>
 
            
-
+                   <div className="boton0">
                 <form action="" onClick={enviarDatos}>
                     {/* <label htmlFor=""> codigo del campeonato //mostrará el estado del campeonato </label>
                     <input name="campeonato" id="campeonato" type="text" placeholder="estado" value={estado}/> */}
                     <button> enviar</button>
                 </form>
+                </div>
 
-                    <div>
+                    <div className="tabla0">
                         {
                             
 
