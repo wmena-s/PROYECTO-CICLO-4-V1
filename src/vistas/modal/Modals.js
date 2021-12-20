@@ -158,7 +158,7 @@ export const Solicitudess = () => {
             <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
                 <Solicitudes></Solicitudes>          
                 </Modal>
-            <p onClick={openModal4} style={{background:"red", color:"white"}} >solicitudes de equipos</p>
+            <p onClick={openModal4} className="btn-primary boton1" >solicitudes de equipos</p>
         </div>
         </>
     )
@@ -180,3 +180,5 @@ export const ListadoPartidos = () => {
     )
 
 }
+
+
