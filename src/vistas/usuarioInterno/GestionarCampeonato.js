@@ -30,14 +30,27 @@ function GestionarCampeonato() {
 
     //buscar el torneo (barra buscadora)
         const [dat, setDat]=useState({
-            nombre:""
+            nombre: "",
+            descripcion: "",
+            ubicacion: "",
+            fechaI: "",
+            fechaF: "",
+            premio1: "",
+            premio2: "",
+            estado:""
         });
 
         const[actual,setActual]= useState([])
 
-        const  manejarcambio=(evento)=>{
+        const  cambiobusqueda=(evento)=>{
             setDat({
                 ...dat,
+                [evento.target.name]: evento.target.value
+            });
+        }
+        const  cambioactualizar=(evento)=>{
+            setActual({
+                ...actual,
                 [evento.target.name]: evento.target.value
             });
         }
@@ -54,33 +67,55 @@ function GestionarCampeonato() {
             return a.nombre == dat.nombre;
         }
 
-        function Mostrar(){
-            setActual(datos.find(buscar))
-        }
-
-        /* //state
-        
-        //agregar valores al state 
-        const  manejarcambio=(evento)=>{
-        setDatos({
-            ...datos,
-            [evento.target.name]: evento.target.value
-        });
-        }
-        //boton buscar
-        const recuperarDatos=async (evento)=>{
+        const Mostrar = async()=>{
             try {
-              evento.preventDefault();
-                  const respuesta = await fetch(`${Constantes.RUTA_API5}/:${datos.nombre}`);
-                  console.log(respuesta.json());
-              }catch(error){
-                  console.log(error);
-              }
+                const respuesta = await fetch(`${Constantes.RUTA_API5}/${dat.nombre}`, {
+                    method: 'GET'
+                });
+                const exitoso = await respuesta.json();
+                if (exitoso) {
+                    console.log(actual)
+                    setActual(exitoso)
+                }
+          
+            }catch(error){
+                console.log(error);
             }
-        */
+        }
 
-
-    //mostrar los datos del torneo
+        const actualizar= async(evento)=>{
+            try {
+                    const respuesta = await fetch(`${Constantes.RUTA_API5}`, {
+                        method: 'PUT',
+                        body: JSON.stringify(actual),
+                        headers: {
+                            'Content-Type' : 'application/json',
+                        }
+                    });
+                    const exitoso = await respuesta.json();
+                    if (exitoso) {
+                        window.location.reload();
+                    }
+              
+                }catch(error){
+                    console.log(error);
+                }
+        }
+        const eliminar = async()=>{
+            try {
+                const respuesta = await fetch(`${Constantes.RUTA_API5}/${actual._id}`, {
+                    method: 'DELETE',
+                });
+                const exitoso = await respuesta.json();
+                if (exitoso) {
+                   alert("finalizado")
+                   window.location.reload();
+                }
+          
+            }catch(error){
+                console.log(error);
+            }
+        }
 
 
     return (
@@ -91,7 +126,12 @@ function GestionarCampeonato() {
                 <div className="row">
                     <div className='col'>
                     <div>
-                        <input type='text' style={inputStyle} id='nombre' name='nombre' onChange={manejarcambio}/>
+                                <select name="nombre" id="nombre" onChange={cambiobusqueda} className='form-control' style={inputStyle}>
+                                    <option value='' selected></option>
+                                {datos.map(item=>(
+                                    <option value={item.nombre}>{item.nombre}</option>
+                                ))}
+                                </select>
                     </div>
                     </div>
                     <div className='col'>
@@ -109,11 +149,20 @@ function GestionarCampeonato() {
                         <ul className="list-unstyled">
                             <li><span className="fw-bold">Campeonato:</span> tipo</li>
                             <li><span className="fw-bold">Lugar:</span> {actual.ubicacion}</li>
-                            <li><span className="fw-bold">Estado:</span> {actual.estado}</li>
+                            <li><span className="fw-bold">Estado:</span> 
+                                <select name="estado" id="estado" onChange={cambioactualizar}>
+                                <option value={actual.estado} selected>{actual.estado}</option>
+                                <option value="Aceptando inscripciones">Aceptando inscripciones</option>
+                                <option value="Inscripciones cerradas">Inscripciones cerradas</option>
+                                <option value="En curso">En curso</option>
+                                <option value="Terminado">Terminado</option>
+                                </select></li>
                             <li><span className="fw-bold">Inicia:</span> {actual.fechaI}</li>
                             <li><span className="fw-bold">Finaliza:</span> {actual.fechaF}</li>
                         </ul>
-                        <button className="btn-success">Editar</button>
+                        <button className="btn-warning" onClick={eliminar}>Eliminar</button>
+                        <button className="btn-success" onClick={actualizar}>actualizar</button>
+                        
                     </div>
                     <div className="col">
                         <div className="">

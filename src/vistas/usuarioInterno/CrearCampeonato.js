@@ -132,13 +132,13 @@ const recuperarDatos=async (evento)=>{
               <label className="label" htmlFor="fechaI">
                 Fecha Inicio
               </label>
-              <input type="date" name="fechaI"></input>
+              <input type="date" name="fechaI" onChange={manejarcambio}></input>
             </div>
             <div className="form-group">
               <label className="label" htmlFor="fechaF">
                 Fecha Final
               </label>
-              <input type="date" name="fechaF"></input>
+              <input type="date" name="fechaF" onChange={manejarcambio}></input>
             </div>
             <div className="form-group">
               <label className="label" htmlFor="premio1">

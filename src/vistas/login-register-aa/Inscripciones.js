@@ -73,7 +73,7 @@ import { Container, Table } from "react-bootstrap";
 // };
 
 
-export default function Inscripciones() {
+export default function Inscripciones(props) {
 
     // const [torneos,setTorneos]=useState([])
 
@@ -105,7 +105,6 @@ export default function Inscripciones() {
 async function enviarDatos (item, item2){
    
     const data = {campeonato: []};
-    console.log(item)
      //envia id del campeonato segun el id pasado en la direccion.
     fetch(`${Constantes.RUTA_API6}${'/'}${item}`, {
         method: 'DELETE'
@@ -121,9 +120,6 @@ async function enviarDatos (item, item2){
       })
     }
 
-
-
-
     //==========================================================================
 
    //cargar listado de campeonatos
@@ -131,10 +127,11 @@ async function enviarDatos (item, item2){
 
 
   useEffect(()=>{
-      fetch(`${Constantes.RUTA_API6}${'/'}${'todo'}`)
+      fetch(`${Constantes.RUTA_API6}${'/'}${'todo'}${'/'}${props.item}`)
       .then(res => res.json())
       .then(data=> setUser(data))
-  },[]);
+  },[props.item]);
+
 
 
     //==========================================================================

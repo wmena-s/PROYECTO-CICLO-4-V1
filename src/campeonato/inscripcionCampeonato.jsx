@@ -17,7 +17,7 @@ const InscripcionCampeonato = () => {
 
     //cargar listado de equpos
     const [equipos, setEquipo] = useState([]);
-
+    
     useEffect(()=>{
         fetch(`${Constantes.RUTA_API}`)
         .then(res => res.json())
@@ -36,17 +36,19 @@ const InscripcionCampeonato = () => {
         setEstado(opcion)
     }
 
+    const [llevar, setLlevar] = useState("")
     
     const selectt2= function (e) {
         const opcion=e.target.value;
         setEstado2(opcion)
+        setLlevar(e.target.value)
+       
 
         fetch(`${Constantes.RUTA_API6}${'/'}${'todo'}${'/'}${e.target.value}`)
         .then(res => res.json())
         .then(data=> setExiste(data))
         
-        console.log(existe);
-
+ 
     }
  
     
@@ -58,9 +60,6 @@ const InscripcionCampeonato = () => {
     
 
  //revisar el estado en que quedo el equpo.
- 
-    const [estadofinal, setEstadofinal] = useState("pendiente");
- 
  
 
     // const enviarDatos=async (evento)=>{
@@ -114,8 +113,6 @@ const InscripcionCampeonato = () => {
             
         })
 
-       //estado final 
-       setEstadofinal("pendiente")
 
         }
 
@@ -162,9 +159,11 @@ const InscripcionCampeonato = () => {
                     <div>
                         {
                             
-                            existe[0]!=null? (<><p>estado de inscripcion</p><Inscripciones></Inscripciones></>): (<p>
+
+                            existe[0]!=null? (<><p>estado de inscripcion</p><Inscripciones item={llevar}></Inscripciones></>): (<p>
                                
-<table className="table">                         <thead>
+                            <table className="table">
+                                <thead>
                                     <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">equipo</th>
@@ -180,7 +179,8 @@ const InscripcionCampeonato = () => {
                                 </tbody>
                                 
                                 </table>   
-                                no exisate</p>)
+                                no exisate
+                                </p>)
                         }
                     </div>
                     

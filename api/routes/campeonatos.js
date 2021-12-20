@@ -29,7 +29,7 @@ router.get('/', async function (req, res) {
 
 //buscar Campeonatos por id
 router.get('/:id', async function (req, res){
-  const campeonato = await CrearCampeonato.findById(req.params.id);
+  const campeonato = await CrearCampeonato.findOne({nombre: req.params.id});
   res.send(campeonato)
 })
 
@@ -44,20 +44,12 @@ router.put('/', async function(req, res){
     fechaI: req.body.fechaI,
     fechaF: req.body.fechaF,
     premio1: req.body.premio1,
-    premio2: req.body.premio2
-  });
-  res.send(true);
-});
-
-//actualizar estado del campeonato
-router.put('/actestado', async function(req, res){
-  await CrearCampeonato.findOneAndUpdate({
-    _id: req.body._id,
-  }, {
+    premio2: req.body.premio2,
     estado: req.body.estado
   });
   res.send(true);
 });
+
 
 //cancelar campeonato
 router.delete('/:id', async function (req, res){
