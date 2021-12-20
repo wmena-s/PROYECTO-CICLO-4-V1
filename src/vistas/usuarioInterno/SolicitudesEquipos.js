@@ -1,4 +1,5 @@
 import React, {Fragment, useEffect, useState}from 'react'
+import './solicitudesEquipos.css'
 import Constantes from '../../Constantes';
 
 
@@ -45,39 +46,40 @@ const SolicitudesEquipos = () => {
   
     return ( 
     <Fragment>
-
-    <h2>listado</h2>
-    <table className="table">
-    <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">equipo</th>
-          <th scope="col">campoenato</th>
-          <th scope="col">estado</th>
-          <th scope="col">Aceptar</th>
-          <th scope="col">Rechazar</th>
-        </tr>
-      </thead>
-      <tbody>
-          
-        
-          {users.map((item)=>{
-         
-            return( 
+      <div className='fondoo0'>
+   
+     
+        <h1>LISTADO DE SOLICITUDES</h1>
+        <table className="table fondoo1">
+        <thead>
             <tr>
-            <th scope="row">{item._id}</th>
-            <td>{item.equipo}</td>
-            <td>{item.campeonato}</td>
-            <td>{item.estado}</td>
-            <td><button class="btn btn-outline-success" onClick={()=>{enviarDatos(item.equipo, item.campeonato, item._id)}}>Aceptar</button></td>
-            <td><button class="btn btn-outline-danger">Eliminar</button></td>
-            </tr>)
-          })}
+              <th scope="col">#</th>
+              <th scope="col">equipo</th>
+              <th scope="col">campoenato</th>
+              <th scope="col">estado</th>
+              <th scope="col">Aceptar</th>
+              <th scope="col">Rechazar</th>
+            </tr>
+          </thead>
+          <tbody>
         
-      </tbody>
-      </table>
+              {users.map((item)=>{
+            
+                return( 
+                <tr>
+                <th scope="row">{item._id}</th>
+                <td>{item.equipo}</td>
+                <td>{item.campeonato}</td>
+                <td>{item.estado}</td>
+                <td><button class="btn btn-outline-success" onClick={()=>{enviarDatos(item.equipo, item.campeonato, item._id)}}>Aceptar</button></td>
+                <td><button class="btn btn-outline-danger">Eliminar</button></td>
+                </tr>)
+              })}
+            
+          </tbody>
+          </table>
 
-    
+      </div>
 
 
     </Fragment>

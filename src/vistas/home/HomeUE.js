@@ -5,6 +5,11 @@ import './HomeUE.css'
 const HomeUE = () => {
     return (
         <div class="divv">
+
+
+            <div >
+               <h1 className='container00'>USUARIO EXTERNO</h1>
+            </div>
 ¿
             <div className="container">
              

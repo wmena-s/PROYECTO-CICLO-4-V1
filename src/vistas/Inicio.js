@@ -2,7 +2,7 @@ import {Carousel} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Nav.css'
 import './inicio.css'
-import {UsuarioExternos, Modaless} from '../vistas/modal/Modals'
+import {UsuarioExternos, Modaless, ModalRegistrar} from '../vistas/modal/Modals'
 import Login from '../vistas/login-register-aa/login'
 
 
@@ -46,7 +46,7 @@ const Inicio = () => {
                 <Carousel.Caption>
                   <h3>REGISTRA TU EQUIPO</h3>
                   <p className="color">registra tu equipo con tiempo . <br/><Link as={Link} to="/registrosJugadores">Registrar</Link></p>
-                  
+                  <ModalRegistrar></ModalRegistrar>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

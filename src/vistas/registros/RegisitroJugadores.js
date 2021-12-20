@@ -31,8 +31,7 @@ class RegisitroJugadores extends React.Component {
         fetch(`${Constantes.RUTA_API}`)
         .then(result=>result.json())
         .then(items=>{
-            console.log(items);
-            console.log('variable' + items[0].nombre)
+           
             this.setState({
             
                 items:items

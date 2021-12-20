@@ -4,6 +4,12 @@
     grid-template-rows: 1fr;
 }
 
+.container00{
+ color: blue;
+ font-size: 50px;
+ padding: 20px 10px 440px;
+}
+
 .colormodal{
     opacity: 1;
     margin: 1rem 1rem;

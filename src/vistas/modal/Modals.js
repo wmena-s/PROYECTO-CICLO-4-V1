@@ -36,7 +36,7 @@ export const Modaless = () => {
         <>
 
         <div>
-            <button onClick={openModal2} className="btn-primary boton1">INGRESAR</button>
+            <button onClick={openModal2} className="btn-primary boton1">REGISTRO USUARIOS INTERNOS</button>
             <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
     
                 <UsuarioInterno2></UsuarioInterno2>
@@ -55,7 +55,7 @@ export const ModalesD = () => {
         <div>
             <button onClick={openModa20} className="btn-primary boton1">INGRESAR</button>
             <Modal isOpen={isOpenModa20} closeModal={closeModa20}>
-    
+                
                 <Inscripciones></Inscripciones>
             </Modal>
         </div>
@@ -70,7 +70,7 @@ export const ModalRegistrar = () => {
         <>
 
         <div>
-            <button onClick={openModal2} className="btn-primary boton1">INGRESAR</button>
+            <button onClick={openModal2} className="btn-primary boton1">REGISTRO DE EQUIPOS</button>
             <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
                 <RegistroDeEquipos></RegistroDeEquipos>
             </Modal>
