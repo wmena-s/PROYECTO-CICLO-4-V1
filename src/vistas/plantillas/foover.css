@@ -1,15 +1,30 @@
 .img-abajo{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .color-fondo{
-    background-color: blue ;
+    background-color: rgb(12, 81, 209) ;
     display: grid;
+    left: 5px;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
-.color-fondo article:hover{
+/* .color-fondo article:hover{
     background-color: yellow;
 
+} */
+
+.colorrr{
+    color: rgb(0, 0, 0);
+}
+
+.articlee{
+    margin: 12%;
+    border-radius: 12%;
+    
+}
+
+.botonnn{
+    border-radius: 24%;
 }

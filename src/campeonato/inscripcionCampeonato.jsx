@@ -127,7 +127,7 @@ const InscripcionCampeonato = () => {
 
     return (
         <div>
-            <h2 className="titulo">hola mundo</h2>
+            <h2 className="titulo">Registrar a campeonados</h2>
             <div className="container0">
                <h2>seleccione campeonato</h2>
                 <select className="selectoO" onChange={selectt}>

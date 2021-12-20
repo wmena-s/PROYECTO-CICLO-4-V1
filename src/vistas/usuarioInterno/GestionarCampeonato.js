@@ -1,10 +1,17 @@
 import React, {Fragment,useEffect, useState} from 'react'
 import Constantes from '../../Constantes';
+import {Solicitudess, ListadoPartidos} from '../modal/Modals'
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
 
 /* import styled from "./GestionarCampeonato.css"; */
 
 function GestionarCampeonato() {
+
+
+     function enviar() {
+        
+    }
+
     const Field = React.forwardRef(({label, type}, ref) => {
         return (
           <div>
@@ -168,11 +175,13 @@ function GestionarCampeonato() {
                         <div className="">
                             <label className="fw-bold text-uppercase" htmlFor="reglasCampeonato">Gestión de equipos</label>
                             <button className="form-control">Inscribe un equipo</button>
-                            <button className="form-control">Solicitudes de equipo</button>
+                            {/* <button className="form-control" onClick={enviar}>Solicitudes de equipo</button> */}
+                            <Solicitudess></Solicitudess>
                             <button className="form-control">Ver equipos</button>
                         </div>
                         <label className="fw-bold text-uppercase" htmlFor="reglasCampeonato">Gestión de partidos</label>
-                        <button className="form-control">Listado de partidos</button>
+                        {/* <button className="form-control">Listado de partidos</button> */}
+                        <ListadoPartidos></ListadoPartidos>
                         <button className="form-control">Definir fecha de partidos</button>
                         <label className="fw-bold text-uppercase" htmlFor="reglasCampeonato">Agregue las reglas del Campeonato</label>
                         <input type="file" className="form-control" name="reglasCampeonato"></input>

@@ -8,15 +8,17 @@ export const Foover = () => {
     return (
 
         <div className="color-fondo">
-            <article>
-                <a> <Politicas></Politicas></a>
-               <a> <PoliticasDoss></PoliticasDoss></a>
+            <article className='articlee'>
+                <a className='botonnn'> <Politicas></Politicas></a>
+               <a className='botonnn'> <PoliticasDoss></PoliticasDoss></a>
             </article>
             <article>
-                <p>datos generales de la empresa</p>
+                <p className='colorrr'>ELABORADO POR</p>
+                <p  className='colorrr'>Equipo 3, Grupo 30, Mision TIC</p>
+
             </article>
             <article>
-                <img className="img-abajo" src="https://play-lh.googleusercontent.com/EjJV6kCXgX9EIhKEtpYhQF8-BUb5En8sDKpOPiWSQJUxv9_RAfl4tMxyIMkQYgeqC6I"></img>
+                <img className="img-abajo" src="https://previews.123rf.com/images/patrimonio/patrimonio1607/patrimonio160700199/60000665-ilustraci%C3%B3n-de-un-bal%C3%B3n-de-baloncesto-establece-dentro-de-escudo-con-el-texto-de-marketing-de-palabr.jpg"></img>
             </article>
         </div>
     )

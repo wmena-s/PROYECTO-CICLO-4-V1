@@ -9,6 +9,8 @@ import ListaJugadores from '../usuario_externo/ListaJugadores';
 import Politica from '../../vistas/plantillas/Politica'
 import PoliticasDos from '../../vistas/plantillas/PoliticasDos'
 import Inscripciones from '../../vistas/login-register-aa/Inscripciones'
+import Solicitudes from '../usuarioInterno/SolicitudesEquipos'
+import Listados from '../usuarioInterno/ListadoPartidos'
 
 import { controllers } from 'chart.js';
 
@@ -141,6 +143,38 @@ export const PoliticasDoss = () => {
                 <PoliticasDos></PoliticasDos>
             </Modal>
             <p onClick={openModal4} style={{background:"red", color:"white"}} >clic aquí</p>
+        </div>
+        </>
+    )
+
+}
+
+export const Solicitudess = () => {
+    const [isOpenModal4, openModal4, closeModal4]=useModal(false);
+    return (
+        <>
+
+        <div>
+            <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
+                <Solicitudes></Solicitudes>          
+                </Modal>
+            <p onClick={openModal4} style={{background:"red", color:"white"}} >solicitudes de equipos</p>
+        </div>
+        </>
+    )
+
+}
+
+export const ListadoPartidos = () => {
+    const [isOpenModal4, openModal4, closeModal4]=useModal(false);
+    return (
+        <>
+
+        <div>
+            <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
+                <Listados/>        
+                </Modal>
+            <p onClick={openModal4} style={{background:"red", color:"white"}} >Listado Partidos</p>
         </div>
         </>
     )

@@ -19,9 +19,7 @@ export default class InfoEquipo extends Component{
             users: equipo.data, 
         })
 
-        
-     
-        console.log("wilder")
+       
        
     }
 
@@ -63,7 +61,6 @@ export default class InfoEquipo extends Component{
                                             <img src="https://1.bp.blogspot.com/-79DdxzZkDog/T76QV6v5IuI/AAAAAAAAAEY/6DzpGZzsmfA/s320/homerocatolico_456_336.jpg" alt="" />
                                             <p>Equipo: <strong>{user.nombreEquipo}</strong></p>
                                             <p>Nombre: {user.nombre}</p> 
-                                            <p>Fri. 27 November 2015</p>
                                             <button class="btn btn-primary">Editar</button>
                                             <button class="btn btn-primary"  onClick= { () => Eliminardb(user, Constantes.RUTA_API)}>Eliminar</button>
                                             {/* permite seleccionar los jugadores que haran parte de un equipo, por medio de la cedula

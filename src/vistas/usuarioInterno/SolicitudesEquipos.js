@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect, useState}from 'react'
 import './solicitudesEquipos.css'
 import Constantes from '../../Constantes';
-
+import Eliminardb from "../../funcionalidades/Eliminardb.js";
 
 const SolicitudesEquipos = () => {
 
@@ -30,6 +30,13 @@ const SolicitudesEquipos = () => {
         
 
     }
+
+  //   async function eliminarDatos(item4){
+  //     console.log("enviado para elimianr" + item4)
+  //     fetch(`${Constantes.RUTA_API6}${'/'}${item4}`, {
+  //       method: 'DELETE'
+  //   })
+  // }
 
 
 //cargar listado de campeonatos
@@ -72,7 +79,8 @@ const SolicitudesEquipos = () => {
                 <td>{item.campeonato}</td>
                 <td>{item.estado}</td>
                 <td><button class="btn btn-outline-success" onClick={()=>{enviarDatos(item.equipo, item.campeonato, item._id)}}>Aceptar</button></td>
-                <td><button class="btn btn-outline-danger">Eliminar</button></td>
+                <td><button class="btn btn-outline-danger" onClick={()=>{Eliminardb(item,Constantes.RUTA_API6 )}}>Eliminar</button></td>
+                {/* <td><button class="btn btn-outline-danger" onClick={()=>{eliminarDatos(item._id)}}>Eliminar</button></td> */}
                 </tr>)
               })}
             
