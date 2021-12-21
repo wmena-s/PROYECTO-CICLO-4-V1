@@ -1,4 +1,5 @@
-.img-abajo{
+
+/* .img-abajo{
     max-width: 100%;
     max-height: 100%;
 }
@@ -13,7 +14,7 @@
 /* .color-fondo article:hover{
     background-color: yellow;
 
-} */
+}
 
 .colorrr{
     color: rgb(0, 0, 0);
@@ -27,4 +28,106 @@
 
 .botonnn{
     border-radius: 24%;
+} */
+
+:root{ /* Seleccionamos nuestra paleta de colores */
+    --main: #7ab7f0;
+    --fondo: rgb(12, 81, 209);
+    --social: #009fd9;
+    --text: #ffffffda;
+
+    /* #0d6efd */
+}
+
+/** footer  **/
+.contenedor{
+    width: 1200px;
+    margin: auto;
+}
+.columnas{
+	display: flex;
+	flex-wrap: wrap;
+}
+.logo{
+    font-size: 32px;
+    color: #ffffff;
+}
+ul{
+	list-style: none;
+}
+
+.footer-home{
+	background-color: var(--fondo);
+    padding: 4rem 0 2rem 0;
+    border-top: .1rem solid var(--main);
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: var(--text);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: bold;
+	position: relative;
+	margin-left: -180px;
+
+}
+.footer-col h4:hover{
+    color: var(--main);
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left: 42%;
+	bottom: -15px;
+	background-color: var(--main);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--text);
+	text-align: start;
+	display: block;
+	line-height: 10px;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: var(--main);
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: var(--main);
+	transition: all 0.5s ease;
+    border: var(--social) solid 1px;
+}
+.footer-col .social-links a:hover{
+	color: #ffffff;
+	background-color: var(--social);
+}
+.derechos{
+    color: #ffffff4d;
+    margin-top: 30px;
+}
+.social-links{
+	margin-left: -136px;
+	color: #ffffff;
+	font-size: 30px !important;
 }

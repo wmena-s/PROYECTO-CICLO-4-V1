@@ -174,7 +174,7 @@ function GestionarCampeonato() {
                     <div className="col">
                         <div className="">
                             <label className="fw-bold text-uppercase" htmlFor="reglasCampeonato">Gestión de equipos</label>
-                            <button className="form-control">Inscribe un equipo</button>
+                            <button className="form-control"> <a href="/usuario_externo/equipos/inscrbir">Inscribe un equipo</a></button>
                             {/* <button className="form-control" onClick={enviar}>Solicitudes de equipo</button> */}
                             <Solicitudess></Solicitudess>
                             <button className="form-control">Ver equipos</button>

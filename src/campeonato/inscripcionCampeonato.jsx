@@ -127,11 +127,11 @@ const InscripcionCampeonato = () => {
 
     return (
         <div>
-            <h2 className="titulo">Registrar a campeonados</h2>
+            <h2 className="titulo">Registrar a campeonatos</h2>
             <div className="container0">
-               <h2>seleccione campeonato</h2>
+               <h2>seleccione un campeonato</h2>
                 <select className="selectoO" onChange={selectt}>
-                    <option value={-1} > selecciona una opcion</option>
+                    <option value={-1} > Selecciona una opción</option>
                    { users.map((item)=>{
                        return(<option key={item._id} value={item._id}>{item.nombre}</option>)
                         
@@ -141,9 +141,9 @@ const InscripcionCampeonato = () => {
 
                 <h2>seleccione equpo</h2>
                 <select className="selectoO" onChange={selectt2}>
-                    <option value={-1} > selecciona una opcion</option>
+                    <option value={-1} > Selecciona una opción</option>
                    { equipos.map((item)=>{
-                       return(<option key={item._id} value={item._id}>{item.nombre}</option>)   
+                       return(<option key={item._id} value={item._id}>{item.nombreEquipo}</option>)   
                    })}
                     
                 </select>
@@ -160,7 +160,7 @@ const InscripcionCampeonato = () => {
                         {
                             
 
-                            existe[0]!=null? (<><p>estado de inscripcion</p><Inscripciones item={llevar}></Inscripciones></>): (<p>
+                            existe[0]!=null? (<><p>estado de inscripción</p><Inscripciones item={llevar}></Inscripciones></>): (<p>
                                
                             <table className="table">
                                 <thead>
